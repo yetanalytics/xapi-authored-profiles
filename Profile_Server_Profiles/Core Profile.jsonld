@@ -1,0 +1,139 @@
+{
+    "id": "https://pttportal.af.mil/xapi/profile/core",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Core Profile"
+    },
+    "definition": {
+        "en": "Core Profile"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/core/v/1",
+            "generatedAtTime": "2023-07-11T08:04:30.652Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "19th Air Force",
+        "url": "https://www.aetc.af.mil/Units/19th-Air-Force/"
+    },
+    "templates": [
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/core/templates/general_statement_rules",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/core/v/1",
+            "prefLabel": {
+                "en": "General Template"
+            },
+            "definition": {
+                "en": "Defines rules which apply to all statements"
+            },
+            "rules": [
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included",
+                    "any": [
+                        "https://pttportal.af.mil/xapi/edipi"
+                    ]
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "A timestamp should be expressed using the format described in RFC 3339, which is a profile of ISO 8601.\n\nA timestamp should include a timezone designator."
+                    }
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "The actor.account.name property should be set to the EDIPI (also known as DoD ID or CAC ID) associated with that user."
+                    }
+                },
+                {
+                    "location": "$.actor.objectType",
+                    "presence": "included",
+                    "any": [
+                        "Agent"
+                    ]
+                },
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "The first element of the context.contextActivities.category array SHOULD reference the 19 AF Core Profile Activity, with the context.contextActivities.category.id attribute set to the profile’s IRI and the context.contextActivities.category.definition.type attribute set to http://adlnet.gov/expapi/activities/profile. The element(s) immediately following the first element of the context.contextActivities.category array SHOULD reference any additional 19 AF profiles which are applicable to the activity. \n"
+                    }
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "The value of the context.registration property SHOULD be set to a Universally Unique Identifier (UUID) , which uniquely represents the current attempt at the activity. Each attempt SHOULD have its own UUID."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/core/templates/general_template_activity_object",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/core/v/1",
+            "prefLabel": {
+                "en": "General Template for Activity Objects"
+            },
+            "definition": {
+                "en": "Defines rules which apply to all statements where the object is an Activity."
+            },
+            "rules": [
+                {
+                    "location": "$.object.definition.name",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "a)\tThe object.definition.name property SHOULD be set to the official name or title of the activity when one exists. When an official name or title does not exist for the activity, the object.definition.name property SHOULD be set to a meaningful human-readable name which is distinct from other existing activity names. "
+                    }
+                },
+                {
+                    "location": "$.object.definition.description.en",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "The object.definition.description.en property SHOULD be set to a short, meaningful description of the activity that provides more detail than the activity name alone. Using an official description of the activity is advised when one is available. "
+                    }
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "The object.definition.type property SHOULD be set to the identifier associated with the relevant activity type when one is available. Relevant activity types can be found in the 19 AF profiles  "
+                    }
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/core/templates/general_template_child_object",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/core/v/1",
+            "prefLabel": {
+                "en": "General Template for Child Objects"
+            },
+            "definition": {
+                "en": "Defines rules for statements in which the object of the statement is a child in a hierarchy."
+            },
+            "rules": [
+                {
+                    "location": "$.context.contextActivities.parent",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "If  the object of a statement is a the child of some parent in a hierarchy, it’s direct parent SHOULD be added to the context.contextActivities.parent array at index 0.\n\nIf the direct parent of the object is conceptual and will never be the object of an xAPI statement, the next parent in the hierarchy SHOULD then be added to the context.contextActivities.parent at index 1. Parent activities SHOULD continue to be added to the array at subsequent indexes until either A) the entire parent hierarchy is represented OR B) the last activity in the array is known to be the object of other xAPI statements."
+                    }
+                }
+            ]
+        }
+    ]
+}

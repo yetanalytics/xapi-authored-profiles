@@ -1,0 +1,139 @@
+{
+    "id": "https://w3id.org/xapi/openedx",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Open edX"
+    },
+    "definition": {
+        "en": "xAPI extensions used within the Open edX ecosystem."
+    },
+    "seeAlso": "https://openedx.org/",
+    "versions": [
+        {
+            "id": "https://w3id.org/xapi/openedx/v/5",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/openedx/v/4"
+            ],
+            "generatedAtTime": "2023-09-12T20:17:58.072Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/openedx/v/4",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/openedx/v/3"
+            ],
+            "generatedAtTime": "2023-07-21T06:24:39.946Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/openedx/v/3",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/openedx/v/2"
+            ],
+            "generatedAtTime": "2023-07-10T07:04:24.459Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/openedx/v/2",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/openedx/v/1"
+            ],
+            "generatedAtTime": "2023-02-15T13:55:11.959Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/openedx/v/1",
+            "generatedAtTime": "2022-11-08T21:11:39.424Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "Open edX",
+        "url": "https://discuss.openedx.org/c/working-groups/data/34"
+    },
+    "concepts": [
+        {
+            "id": "https://w3id.org/xapi/openedx/extension/speed-from",
+            "type": "ResultExtension",
+            "inScheme": "https://w3id.org/xapi/openedx/v/5",
+            "prefLabel": {
+                "en": "speed-from"
+            },
+            "definition": {
+                "en": "Used to identify the speed of media actor changed from"
+            },
+            "inlineSchema": "{\"type\": \"string\"}"
+        },
+        {
+            "id": "https://w3id.org/xapi/openedx/extension/speed-to",
+            "type": "ResultExtension",
+            "inScheme": "https://w3id.org/xapi/openedx/v/5",
+            "prefLabel": {
+                "en": "speed-to"
+            },
+            "definition": {
+                "en": "Used to identify the speed of media actor changed to"
+            },
+            "inlineSchema": "{\"type\": \"string\"}"
+        },
+        {
+            "id": "https://w3id.org/xapi/openedx/extension/session-id",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/openedx/v/5",
+            "prefLabel": {
+                "en": "session-id"
+            },
+            "definition": {
+                "en": "A unique identifier for session representing period of activity between a actor logging in and logging out of LMS"
+            },
+            "inlineSchema": "{\"type\": \"string\"}"
+        },
+        {
+            "id": "https://w3id.org/xapi/openedx/extension/transformer-version",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/openedx/v/5",
+            "prefLabel": {
+                "en": "transformer-version"
+            },
+            "definition": {
+                "en": "The transformer version will be a concatenation of the name of the transformer (\"event-routing-backends\"), an @ symbol, and the semantic version of the event-routing-backends package used to generate the event."
+            },
+            "inlineSchema": "{\"type\": \"string\"}"
+        },
+        {
+            "id": "https://w3id.org/xapi/openedx/verb/voted",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/openedx/v/5",
+            "prefLabel": {
+                "en": "voted"
+            },
+            "definition": {
+                "en": "Indicates that the actor has voted for a specific object"
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/openedx/verb/unreported",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/openedx/v/5",
+            "prefLabel": {
+                "en": "unreported"
+            },
+            "definition": {
+                "en": "Users can report an object as inappropriate, they can also undo this action. This indicates a user has undone a previously reported object"
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/openedx/activity/timed-assessment",
+            "type": "Activity",
+            "inScheme": "https://w3id.org/xapi/openedx/v/5",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "timed-assessment"
+                },
+                "description": {
+                    "en": "A timed assessment is an activity type that determines a learner’s mastery of a particular subject area, limited to a time constraint"
+                },
+                "type": "http://adlnet.gov/expapi/activities/assessment"
+            }
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+{
+    "id": "https://w3id.org/xapi/gblxapi",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "GBLxAPI - K-12 Education Apps Profile"
+    },
+    "definition": {
+        "en": "The GBLxAPI K-12 Education Apps profile of xAPI was created to identify and standardize the common interactions that can be found in k-12 educational learning apps and game-based learning. The profile was created as part of a research project known as GBLxAPI. "
+    },
+    "seeAlso": "https://gblxapi.org",
+    "versions": [
+        {
+            "id": "https://w3id.org/xapi/gblxapi/v1.0",
+            "generatedAtTime": "2020-11-05T18:40:02.945Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "GBLxAPI",
+        "url": "https://github.com/adlnet/xapi-authored-profiles"
+    },
+    "concepts": [
+        {
+            "id": "https://w3id.org/xapi/gblxapi/extensions/grade",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/gblxapi/v1.0",
+            "prefLabel": {
+                "en": "grade"
+            },
+            "definition": {
+                "en": "The grade level(s) content available in the object represented alpha-numerically from Pre-K (PK), Kindergarten (K), and grades 1-12."
+            },
+            "inlineSchema": "{ \"enum\": [\"Pre-K\", \"K\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\", \"12\"] }"
+        },
+        {
+            "id": "https://w3id.org/xapi/gblxapi/extensions/domain",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/gblxapi/v1.0",
+            "prefLabel": {
+                "en": "domain"
+            },
+            "definition": {
+                "en": "Represents the domain or discipline content type that the actor has experienced in the statement. An example for GBLxAPI for math is Counting and Cardinality."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/gblxapi/extensions/subdomain",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/gblxapi/v1.0",
+            "prefLabel": {
+                "en": "subdomain"
+            },
+            "definition": {
+                "en": "Represents the subdomain content type the actor has experienced in the statement. An example for GBLxAPI for math is Problem Solving."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/gblxapi/extensions/skill",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/gblxapi/v1.0",
+            "prefLabel": {
+                "en": "skill"
+            },
+            "definition": {
+                "en": "Represents a skills type the actor has experienced in the statement. An example for GBLxAPI for science is Cause and Effect."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/gblxapi/extensions/focus",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/gblxapi/v1.0",
+            "prefLabel": {
+                "en": "focus"
+            },
+            "definition": {
+                "en": "Represents a subject area focus the actor has experienced in the statement. An example for GBLxAPI for science is Electricity."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/gblxapi/extensions/topic",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/gblxapi/v1.0",
+            "prefLabel": {
+                "en": "topic"
+            },
+            "definition": {
+                "en": "Represents a subject area topic the actor has experienced in the statement. An example for GBLxAPI for science is Natural Selection."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/gblxapi/extensions/action",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/gblxapi/v1.0",
+            "prefLabel": {
+                "en": "action"
+            },
+            "definition": {
+                "en": "Represents an action the actor has undertaken in the statement. An example for GBLxAPI for science is Graphs, Plots, and Tables."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi.gblxapi/extensions/difficulty",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/gblxapi/v1.0",
+            "prefLabel": {
+                "en": "difficulty"
+            },
+            "definition": {
+                "en": "Represents a difficulty level that determines the complexity of questions that the learner must answer or activities they must perform."
+            }
+        }
+    ]
+}

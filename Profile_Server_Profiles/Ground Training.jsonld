@@ -1,0 +1,73 @@
+{
+    "id": "https://pttportal.af.mil/xapi/profile/ground-training",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Ground Training"
+    },
+    "definition": {
+        "en": "For statements whose activity is part of a ground training event"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/ground-training/v/1",
+            "generatedAtTime": "2023-07-11T08:04:30.652Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "19th Air Force",
+        "url": "https://www.aetc.af.mil/Units/19th-Air-Force/"
+    },
+    "concepts": [
+        {
+            "id": "https://pttportal.af.mil/xapi/activity-type/ground-training-lesson",
+            "type": "ActivityType",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/ground-training/v/1",
+            "prefLabel": {
+                "en": "ground-training-lesson"
+            },
+            "definition": {
+                "en": "An instructor-led lecture or demonstration that is part of a ground training syllabus event"
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/activity-type/ground-training-assessment",
+            "type": "ActivityType",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/ground-training/v/1",
+            "prefLabel": {
+                "en": "ground-training-assessment"
+            },
+            "definition": {
+                "en": "An assessment given as part of a ground training syllabus event"
+            }
+        }
+    ],
+    "templates": [
+        {
+            "id": "https://pttportal.af.mil/xapi/statement-template/ground-training-lesson",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/ground-training/v/1",
+            "prefLabel": {
+                "en": "Ground Training Lesson"
+            },
+            "definition": {
+                "en": "For statements whose object is of the ground-training-lesson activity type"
+            },
+            "objectActivityType": "https://pttportal.af.mil/xapi/activity-type/ground-training-lesson",
+            "rules": [
+                {
+                    "location": "$.verb",
+                    "scopeNote": {
+                        "en": "A student’s attendance at a ground training lesson SHOULD be recorded using the verb attended."
+                    },
+                    "any": [
+                        "http://adlnet.gov/expapi/verbs/attended"
+                    ]
+                }
+            ]
+        }
+    ]
+}

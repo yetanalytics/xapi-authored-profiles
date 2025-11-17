@@ -1,0 +1,161 @@
+{
+    "id": "https://pttportal.af.mil/xapi/profile/syllabus-events",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Syllabus Events"
+    },
+    "definition": {
+        "en": "The Syllabus Event Profile is applicable to any xAPI statement where the object of the statement is a syllabus event or any of its higher-level aggregations (such as syllabus unit, syllabus phase, or the entire training program itself)"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/syllabus-events/v/1",
+            "generatedAtTime": "2023-07-11T08:04:30.652Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "19th Air Force",
+        "url": "https://www.aetc.af.mil/Units/19th-Air-Force/"
+    },
+    "concepts": [
+        {
+            "id": "https://pttportal.af.mil/xapi/activity-type/training-program",
+            "type": "ActivityType",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/syllabus-events/v/1",
+            "prefLabel": {
+                "en": "training program"
+            },
+            "definition": {
+                "en": "An entire program of U.S. Air Force flying instruction, such as T-6A Undergraduate Pilot Training (UPT) or T-38C Fighter Bomber Fundamentals (FBF). "
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/activity-type/syllabus-unit",
+            "type": "ActivityType",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/syllabus-events/v/1",
+            "prefLabel": {
+                "en": "syllabus unit"
+            },
+            "definition": {
+                "en": "One “block” of training within a syllabus phase. Phases may have one or more unit of training."
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/activity-type/syllabus-phase",
+            "type": "ActivityType",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/syllabus-events/v/1",
+            "prefLabel": {
+                "en": "syllabus phase"
+            },
+            "definition": {
+                "en": "A major division of the training program. A training program may have one or more phases."
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/activity-type/syllabus-event",
+            "type": "ActivityType",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/syllabus-events/v/1",
+            "prefLabel": {
+                "en": "syllabus event"
+            },
+            "definition": {
+                "en": "Any individual academic lesson, ground training lesson, aircraft sortie, or simulator sortie. These are the fundamental building blocks of the syllabus and are assigned a lesson designator key (e.g. “IN101”, “FT5002”). A unit may have one or more events.  "
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/extension/media-category",
+            "type": "ContextExtension",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/syllabus-events/v/1",
+            "prefLabel": {
+                "en": "media category"
+            },
+            "definition": {
+                "en": "The category of media which is primarily associated with the activity. Media categories include Academic Training, Ground Training, Immersive Training Device (ITD), Aircrew Training Device (ATD), Aircraft. "
+            },
+            "inlineSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"media-category\": {\n      \"type\": \"string\",\n      \"enum\": [\"academic training\", \"ground training\", \"immersive training device\", \"aircrew training device\", \"aircraft\"]\n    }\n  },\n  \"required\": [\"media-type\"]\n}"
+        }
+    ],
+    "templates": [
+        {
+            "id": "https://pttportal.af.mil/xapi/statement-template/syllabus-event",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/syllabus-events/v/1",
+            "prefLabel": {
+                "en": "syllabus event"
+            },
+            "definition": {
+                "en": "For statements the object of which is a syllabus event activity. "
+            },
+            "objectActivityType": "https://pttportal.af.mil/xapi/activity-type/syllabus-event",
+            "rules": [
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/extension/media-type']",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "A statement whose object is of the activity type syllabus-event SHOULD include, at a minimum, the following extensions: media-type, media-category\n"
+                    }
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/extension/media-category']",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "a)\tA statement whose object is of the activity type syllabus-event SHOULD include, at a minimum, the following extensions: media-type, media-category"
+                    }
+                },
+                {
+                    "location": "$.context.contextActivities.parent",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "If the object of a statement is the child of some parent in a hierarchy, it’s direct parent SHOULD be added to the context.contextActivities.parent array at index 0. If the direct parent of the object is conceptual and will never be the object of an xAPI statement, the next parent in the hierarchy SHOULD then be added to the context.contextActivities.parent at index 1. Parent activities SHOULD continue to be added to the array at subsequent indexes until either A) the entire parent hierarchy is represented OR B) the last activity in the array is known to be the object of other xAPI statements. Syllabus events are part of a hierarchical structure that includes the parent objects of syllabus unit, syllabus phase, and ultimately the overall training program (See related figure in the xAPI Implementation Guide). This hierarchical relationship SHOULD be represented in the context.contextActivites.parent attribute.\n"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/statement-templace/syllabus-phase",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/syllabus-events/v/1",
+            "prefLabel": {
+                "en": "syllabus phase"
+            },
+            "definition": {
+                "en": "For statements the object of which is a syllabus phase activity. "
+            },
+            "objectActivityType": "https://pttportal.af.mil/xapi/activity-type/syllabus-phase",
+            "rules": [
+                {
+                    "location": "$.context.contextActivities.parent",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "If the object of a statement is the child of some parent in a hierarchy, it’s direct parent SHOULD be added to the context.contextActivities.parent array at index 0. If the direct parent of the object is conceptual and will never be the object of an xAPI statement, the next parent in the hierarchy SHOULD then be added to the context.contextActivities.parent at index 1. Parent activities SHOULD continue to be added to the array at subsequent indexes until either A) the entire parent hierarchy is represented OR B) the last activity in the array is known to be the object of other xAPI statements. Syllabus events are part of a hierarchical structure that includes the parent objects of syllabus unit, syllabus phase, and ultimately the overall training program (See related figure in the xAPI Implementation Guide). This hierarchical relationship SHOULD be represented in the context.contextActivites.parent attribute.\n"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/statement-template/syllabus-unit",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/syllabus-events/v/1",
+            "prefLabel": {
+                "en": "syllabus unit"
+            },
+            "definition": {
+                "en": "For statements the object of which is a syllabus unit activity. "
+            },
+            "objectActivityType": "https://pttportal.af.mil/xapi/activity-type/syllabus-unit",
+            "rules": [
+                {
+                    "location": "$.context.contextActivities.parent",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "If the object of a statement is the child of some parent in a hierarchy, it’s direct parent SHOULD be added to the context.contextActivities.parent array at index 0. If the direct parent of the object is conceptual and will never be the object of an xAPI statement, the next parent in the hierarchy SHOULD then be added to the context.contextActivities.parent at index 1. Parent activities SHOULD continue to be added to the array at subsequent indexes until either A) the entire parent hierarchy is represented OR B) the last activity in the array is known to be the object of other xAPI statements. Syllabus events are part of a hierarchical structure that includes the parent objects of syllabus unit, syllabus phase, and ultimately the overall training program (See related figure in the xAPI Implementation Guide). This hierarchical relationship SHOULD be represented in the context.contextActivites.parent attribute.\n\n"
+                    }
+                }
+            ]
+        }
+    ]
+}

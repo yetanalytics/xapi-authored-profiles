@@ -1,0 +1,65 @@
+{
+    "id": "https://profiles.adlnet.gov/xapi/4a1d0786-1de4-4941-9edc-2513b5c83a17",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "EmotionAPI"
+    },
+    "definition": {
+        "en": "a profile to describe emotion "
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://profiles.adlnet.gov/xapi/4a1d0786-1de4-4941-9edc-2513b5c83a17/v/1",
+            "generatedAtTime": "2023-07-11T08:04:30.652Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "EmotionAPI",
+        "url": "https://discord.gg/NTWjC5GmS8"
+    },
+    "concepts": [
+        {
+            "id": "https://profiles.adlnet.gov/xapi/4a1d0786-1de4-4941-9edc-2513b5c83a17/activity/emotion",
+            "type": "Activity",
+            "inScheme": "https://profiles.adlnet.gov/xapi/4a1d0786-1de4-4941-9edc-2513b5c83a17/v/1",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "emotion"
+                },
+                "description": {
+                    "en": "describe an emotion on a valence-arousal scale"
+                },
+                "type": "https://profiles.adlnet.gov/xapi/4a1d0786-1de4-4941-9edc-2513b5c83a17/activity/emotion"
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/4a1d0786-1de4-4941-9edc-2513b5c83a17/extension/valence",
+            "type": "ActivityExtension",
+            "inScheme": "https://profiles.adlnet.gov/xapi/4a1d0786-1de4-4941-9edc-2513b5c83a17/v/1",
+            "prefLabel": {
+                "en": "valence"
+            },
+            "definition": {
+                "en": "give the valence value for an emotion activity"
+            },
+            "inlineSchema": "{ \"type\": \"number\" }"
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/4a1d0786-1de4-4941-9edc-2513b5c83a17/extension/arousal",
+            "type": "ActivityExtension",
+            "inScheme": "https://profiles.adlnet.gov/xapi/4a1d0786-1de4-4941-9edc-2513b5c83a17/v/1",
+            "prefLabel": {
+                "en": "arousal"
+            },
+            "definition": {
+                "en": "give the arousal value for an emotion activity"
+            },
+            "inlineSchema": "{ \"type\": \"number\" }"
+        }
+    ]
+}

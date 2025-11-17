@@ -1,0 +1,567 @@
+{
+    "id": "https://ed3chain.com/xapi/boll",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "BOLL Profile"
+    },
+    "definition": {
+        "en": "Blockchain of Learning Logs Profile"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://ed3chain.com/xapi/boll/v/1",
+            "generatedAtTime": "2022-04-14T18:58:48.297Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "ADL Vocabulary",
+        "url": "https://github.com/adlnet/xapi-authored-profiles"
+    },
+    "concepts": [
+        {
+            "id": "https://ed3chain.com/xapi/boll#scored",
+            "type": "Verb",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "scored"
+            },
+            "definition": {
+                "en": "Indicates the OICS has scored the learner on the learning assessment."
+            },
+            "relatedMatch": [
+                "http://adlnet.gov/expapi/verbs/scored",
+                "https://w3id.org/xapi/tla/verbs/scored"
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/activity#printed-assessment",
+            "type": "ActivityType",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "printed-assessment"
+            },
+            "definition": {
+                "en": "A written examination or test that is provided in paper form, and intended to be completed using a pencil or pen."
+            },
+            "relatedMatch": [
+                "https://w3id.org/xapi/acrossx/activities/printed-assessment"
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/activity#credential",
+            "type": "ActivityType",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "credential"
+            },
+            "definition": {
+                "en": "An authoritative statement that the learner can perform the task."
+            },
+            "relatedMatch": [
+                "https://w3id.org/xapi/tla/activity-types/credential"
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/verb#schooled",
+            "type": "Verb",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "schooled"
+            },
+            "definition": {
+                "en": "Indicates OICS has enrolled the learner in a schooling system."
+            },
+            "relatedMatch": [
+                "https://w3id.org/xapi/tla/verbs/schooled"
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/extensions#learner",
+            "type": "ContextExtension",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "learner"
+            },
+            "definition": {
+                "en": "the learner involved in this activity."
+            },
+            "inlineSchema": "{\n    \"type\": \"object\",\n     \"properties\": {\n        \"account\": {\n            \"homePage\": {\n                \"type\": \"string\",\n                 \"required\":\"false\" \n            },\n            \"name\": {\n                \"type\": \"string\",\n                \"required\": \"true\"\n            },\n        \"type\": \"object\"\n        }\n    } \n}",
+            "context": "",
+            "recommendedVerbs": [
+                "https://ed3chain.com/xapi/boll/verb#schooled"
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/extensions#location",
+            "type": "ContextExtension",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "location"
+            },
+            "definition": {
+                "en": "The physical location of the statement's object"
+            },
+            "inlineSchema": "{\"type\": \"object\", \"properties\": {\"http://id.tincanapi.com/extension/latitude\": {\"type\": \"string\"}, \"http://id.tincanapi.com/extension/longitude\": {\"type\": \"string\"}}}"
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/activities#program",
+            "type": "ActivityType",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "program"
+            },
+            "definition": {
+                "en": "A collection of activities such as courses and work items that collectively define a specific goal or career."
+            },
+            "narrowMatch": [
+                "https://w3id.org/xapi/cmi5/activitytype/course",
+                "https://w3id.org/xapi/cmi5/activitytype/block"
+            ]
+        },
+        {
+            "id": "http://id.tincanapi.com/activitytype/lms/course",
+            "type": "ActivityType",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "lms-course"
+            },
+            "definition": {
+                "en": "\nA course represents an amount of content that is published and registered on an LMS with the purpose of gaining completion."
+            }
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/verbs#passed",
+            "type": "Verb",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "passed"
+            },
+            "definition": {
+                "en": "Indicates the OICS judged that the learner has passed the requirements for enrolling in the object."
+            },
+            "narrowMatch": [
+                "http://adlnet.gov/expapi/verbs/passed"
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/extensions#school",
+            "type": "ContextExtension",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "school"
+            },
+            "definition": {
+                "en": " Indicate an institution designed to provide learning spaces and learning environments for the teaching of students under the direction of teachers."
+            },
+            "inlineSchema": "{ \"type\": \"object\", \"properties\": { \"account\": { \"homePage\": { \"type\": \"string\", \"required\":\"false\" }, \"name\": { \"type\": \"string\", \"required\": \"true\" }, \"type\": \"object\" } } }",
+            "context": "",
+            "recommendedVerbs": [
+                "https://ed3chain.com/xapi/boll/verb#schooled"
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/verbs#applied",
+            "type": "Verb",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "applied"
+            },
+            "definition": {
+                "en": "The actor has applied to be evaluated for possible enrolment in the object."
+            },
+            "related": [
+                "https://ed3chain.com/xapi/boll/verb#schooled"
+            ],
+            "relatedMatch": [
+                "http://adlnet.gov/expapi/verbs/registered"
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/verbs#failed",
+            "type": "Verb",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "failed"
+            },
+            "definition": {
+                "en": "This indicates the OICS judged the learner not to have passed the activity to a level of predetermined satisfaction."
+            },
+            "broadMatch": [
+                "http://adlnet.gov/expapi/verbs/failed"
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/verbs#declined",
+            "type": "Verb",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "declined"
+            },
+            "definition": {
+                "en": "This indicates that the actor has declined to enrol in the object."
+            },
+            "broadMatch": [
+                "http://activitystrea.ms/reject"
+            ]
+        }
+    ],
+    "templates": [
+        {
+            "id": "https://ed3chain.com/xapi/boll#scored",
+            "type": "StatementTemplate",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "scored"
+            },
+            "definition": {
+                "en": "Indicates the OICS has awarded the learner a score on a learning activity"
+            },
+            "verb": "https://ed3chain.com/xapi/boll#scored",
+            "objectActivityType": "https://ed3chain.com/xapi/boll/activity#printed-assessment",
+            "contextStatementRefTemplate": [
+                "https://w3id.org/xapi/tla#scored"
+            ],
+            "rules": [
+                {
+                    "location": "$.object",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.score",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.score.scaled",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.raw",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.score.min",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.score.max",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.success",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.extensions",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.object.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "presence": "included",
+                    "any": [
+                        "https://ed3chain.com/xapi/boll/activity#printed-assessment"
+                    ]
+                },
+                {
+                    "location": "$.verb",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "English is the default"
+                    },
+                    "any": [
+                        "https://ed3chain.com/xapi/boll/verbs#scored"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/tla#schooled",
+            "type": "StatementTemplate",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "schooled"
+            },
+            "definition": {
+                "en": "Indicates OICS has enrolled the learner in a schooling system"
+            },
+            "verb": "https://w3id.org/xapi/tla/verbs/schooled",
+            "rules": [
+                {
+                    "location": "$.result",
+                    "presence": "excluded"
+                },
+                {
+                    "location": "$.object.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "presence": "included",
+                    "any": [
+                        "https://w3id.org/xapi/tla/activity-types/competency",
+                        "https://w3id.org/xapi/tla/activity-types/career",
+                        "https://w3id.org/xapi/tla/activity-types/badge",
+                        "https://w3id.org/xapi/tla/activity-types/credential",
+                        "https://w3id.org/xapi/tla/activity-types/job_duty_gig"
+                    ]
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/unit_identification_code']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/learner']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll/template#schooled",
+            "type": "StatementTemplate",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "schooled"
+            },
+            "definition": {
+                "en": "Indicates OICS has enrolled the learner in a schooling system"
+            },
+            "verb": "https://ed3chain.com/xapi/boll/verb#schooled",
+            "objectActivityType": "https://ed3chain.com/xapi/boll/activity#credential",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.verb",
+                    "presence": "included",
+                    "all": [
+                        "https://ed3chain.com/xapi/boll/verb#schooled"
+                    ]
+                },
+                {
+                    "location": "$.object.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "presence": "included",
+                    "any": [
+                        "https://ed3chain.com/xapi/boll/activity#credential"
+                    ]
+                },
+                {
+                    "location": "$.context.extensions['https://ed3chain.com/xapi/boll/extensions#learner'",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://ed3chain.com/xapi/boll/extensions#location']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll#passed",
+            "type": "StatementTemplate",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "passed"
+            },
+            "definition": {
+                "en": "Indicates that an OICS judged that the learner has satisfied all the requirements for this object."
+            },
+            "verb": "https://ed3chain.com/xapi/boll/verbs#passed",
+            "objectActivityType": "https://ed3chain.com/xapi/boll/activities#program",
+            "rules": [
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "presence": "included",
+                    "any": [
+                        "https://ed3chain.com/xapi/boll/activities#program"
+                    ]
+                },
+                {
+                    "location": "$.context.extensions.['https://ed3chain.com/xapi/boll/extensions#learner']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.id",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll#applied",
+            "type": "StatementTemplate",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "applied"
+            },
+            "definition": {
+                "en": "Indicates that the actor applied to be tested or enrolled in the object."
+            },
+            "verb": "https://ed3chain.com/xapi/boll/verbs#applied",
+            "objectActivityType": "https://ed3chain.com/xapi/boll/activities#program",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "presence": "included",
+                    "any": [
+                        "https://ed3chain.com/xapi/boll/activities#program"
+                    ]
+                },
+                {
+                    "location": "$.object.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions.['https://ed3chain.com/xapi/boll/extensions#school']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions.['https://ed3chain.com/xapi/boll/extensions#location']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll#failed",
+            "type": "StatementTemplate",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "failed"
+            },
+            "definition": {
+                "en": "This indicates the OICS judged the learner not to have passed the activity to a level of predetermined satisfaction."
+            },
+            "verb": "https://ed3chain.com/xapi/boll/verbs#failed",
+            "objectActivityType": "https://ed3chain.com/xapi/boll/activities#program",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "presence": "included",
+                    "any": [
+                        "https://ed3chain.com/xapi/boll/activities#program"
+                    ]
+                },
+                {
+                    "location": "$.object.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions.['https://ed3chain.com/xapi/boll/extensions#learner']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://ed3chain.com/xapi/boll#declined",
+            "type": "StatementTemplate",
+            "inScheme": "https://ed3chain.com/xapi/boll/v/1",
+            "prefLabel": {
+                "en": "declined"
+            },
+            "definition": {
+                "en": "This indicates that the actor has declined to enrol in the object."
+            },
+            "verb": "https://ed3chain.com/xapi/boll/verbs#declined",
+            "objectActivityType": "https://ed3chain.com/xapi/boll/activities#program",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object..id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "presence": "included",
+                    "any": [
+                        "https://ed3chain.com/xapi/boll/activities#program"
+                    ]
+                },
+                {
+                    "location": "$.context.extensions.['https://ed3chain.com/xapi/boll/extensions#school']",
+                    "presence": "included"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "id": "https://profiles.adlnet.gov/xapi/90feff49-3709-460a-855a-0025d0b12ab7",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "EDA Course"
+    },
+    "definition": {
+        "en": "Make a xAPI Demo from Develop"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://profiles.adlnet.gov/xapi/90feff49-3709-460a-855a-0025d0b12ab7/v/1",
+            "generatedAtTime": "2023-04-27T17:49:36.077Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "eda",
+        "url": "https://edu.nd.com.hk/?lang=en"
+    },
+    "templates": [
+        {
+            "id": "https://profiles.adlnet.gov/xapi/90feff49-3709-460a-855a-0025d0b12ab7/templates/video1",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/90feff49-3709-460a-855a-0025d0b12ab7/v/1",
+            "prefLabel": {
+                "en": "video1"
+            },
+            "definition": {
+                "en": "Make a Statement  for demo"
+            }
+        }
+    ]
+}

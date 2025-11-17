@@ -1,0 +1,624 @@
+{
+    "id": "https://w3id.org/xapi/acrossx",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "AcrossX Profile"
+    },
+    "definition": {
+        "en": "AcrossX Profile"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://w3id.org/xapi/acrossx/v/2",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/acrossx/v1.0.1"
+            ],
+            "generatedAtTime": "2021-03-12T14:09:49.381Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/v1.0.1",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/acrossx/v1.0"
+            ],
+            "generatedAtTime": "2020-11-05T18:40:02.945Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "acrossx",
+        "url": "https://github.com/adlnet/xapi-authored-profiles"
+    },
+    "concepts": [
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/message",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "message"
+            },
+            "definition": {
+                "en": "Information that is communicated by or to or between individual actors or groups of actors."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/collaboration",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "collaboration"
+            },
+            "definition": {
+                "en": "The activity involving multiple actors working together on an assignment, a project, a problem-solving challenge or a cause."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/e-book",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "e-book"
+            },
+            "definition": {
+                "en": "A book in electronic form as a document, file, or interactive application with optional formatting and control features."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/face-to-face-discussion",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "face-to-face-discussion"
+            },
+            "definition": {
+                "en": "An exchange or communication on a topic by two or more actors in-person taking place in a physical location."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/instant-response-system",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "instant-response-system"
+            },
+            "definition": {
+                "en": "An activity that allows instructors to create slides with embedded quizzes/polling questions to collect responses and get reporting instantly during class."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/learning-plan",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "learning-plan"
+            },
+            "definition": {
+                "en": "Used to plan and organize learning activities from different activity providers. It could be built by instructors, learning designers or learners."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/note",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "note"
+            },
+            "definition": {
+                "en": "Refers to an object that was annotated as part of the activity."
+            },
+            "exactMatch": [
+                "http://activitystrea.ms/schema/1.0/note"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/online-discussion",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "online-discussion"
+            },
+            "definition": {
+                "en": "An exchange or communication on a topic by two or more actors in-person taking place online or virtually."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/page",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "page"
+            },
+            "definition": {
+                "en": "The single representation of a specific page number and the content on that page in any digitally or physically written material."
+            },
+            "broadMatch": [
+                "http://activitystrea.ms/schema/1.0/page"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/printed-assessment",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "printed-assessment"
+            },
+            "definition": {
+                "en": "A written examination or test provided in paper form, and intended to be completed using a pencil or pen."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/printed-book",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "printed-book"
+            },
+            "definition": {
+                "en": "A written work or composition that has been physically printed on paper pages bound together."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/printed-worksheet",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "printed-worksheet"
+            },
+            "definition": {
+                "en": "A page or group of pages containing problems, exercises, or instructions for learning activities."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/search-engine",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "search-engine"
+            },
+            "definition": {
+                "en": "A software program that searches a database and gathers and reports information that contains or is related to specified terms."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/video",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "video"
+            },
+            "definition": {
+                "en": "A recording of audible and visual content intended to be shown on a video display."
+            },
+            "exactMatch": [
+                "http://activitystrea.ms/schema/1.0/video",
+                "https://w3id.org/xapi/video/activity-type/video"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/activities/webpage",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "webpage"
+            },
+            "definition": {
+                "en": "A web document (usually HTML-based) accessible by anyone connected to the internet and by using a web browser."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/annotated",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "annotated"
+            },
+            "definition": {
+                "en": "Indicates the actor added a supplement to the content, highlight or mark."
+            },
+            "relatedMatch": [
+                "http://risc-inc.com/annotator/verbs/annotated",
+                "https://w3id.org/xapi/adb/verbs/annotated"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/designed",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "designed"
+            },
+            "definition": {
+                "en": "Indicates the actor carefully planned or created the object for a specific purpose."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/disliked",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "disliked"
+            },
+            "definition": {
+                "en": "Indicates that the actor does not approve of the object or activity."
+            },
+            "relatedMatch": [
+                "http://activitystrea.ms/schema/1.0/dislike"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/edited",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "edited"
+            },
+            "definition": {
+                "en": "Indicates the actor added or modified the content in a document or object."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/evaluated",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "evaluated"
+            },
+            "definition": {
+                "en": "Indicates the actor formed an opinion or prepared to assess another actor or object."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/liked",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "liked"
+            },
+            "definition": {
+                "en": "Indicates that the actor approves of, recommends, or endorses the object or activity."
+            },
+            "exactMatch": [
+                "http://activitystrea.ms/schema/1.0/like"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/posted",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "posted"
+            },
+            "definition": {
+                "en": "Used to describe the action of posting a discussion topic or message on a forum."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/reported",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "reported"
+            },
+            "definition": {
+                "en": "Indicates the actor announced the result of an experience or activity."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/revealed",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "revealed"
+            },
+            "definition": {
+                "en": "Indicates the actor exposed an object or content that's previously hidden."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/searched",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "searched"
+            },
+            "definition": {
+                "en": "Indicates the actor looked for information in an object."
+            },
+            "exactMatch": [
+                "http://activitystrea.ms/schema/1.0/search"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/was-assigned",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "was-assigned"
+            },
+            "definition": {
+                "en": "Indicates the actor was given or required to access an object."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/watched",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "watched"
+            },
+            "definition": {
+                "en": "Indicates the actor observed a visual obect."
+            },
+            "exactMatch": [
+                "https://w3id.org/xapi/adb/verbs/watched",
+                "http://activitystrea.ms/schema/1.0/watch"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/alignment",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "alignment"
+            },
+            "definition": {
+                "en": "It's to indicate the node in a competency standard or knowledge graph the activity/content is aligned to, could be a string or a URL of the corresponding information page."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/anchor-text",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "anchor-text"
+            },
+            "definition": {
+                "en": "It's the text string associated with an internal or external link (to another book page or web page)."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/blooms-level",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "blooms-level"
+            },
+            "definition": {
+                "en": "It's to indicate the Bloom's level the activity or content is aligned to."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/by-whom",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "by-whom"
+            },
+            "definition": {
+                "en": "It's to indicate who created/authored/presented the object."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/chapter",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "chapter"
+            },
+            "definition": {
+                "en": "It's to indicate the chapter this statement is related to, used for ebook in AcrossX."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/column",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "column"
+            },
+            "definition": {
+                "en": "It's to indicate the column number of a cell in a spreadsheet."
+            },
+            "inlineSchema": "{ \"type\": \"number\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/feedback",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "feedback"
+            },
+            "definition": {
+                "en": "It's the feedback the Actor gets after answering a question, or feedback from teacher or peer."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/highlightedString",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "highlightedString"
+            },
+            "definition": {
+                "en": "It's a string highlighted by the Actor."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/pass-score",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "pass-score"
+            },
+            "definition": {
+                "en": "It's to indicate the required score to pass an assessment."
+            },
+            "inlineSchema": "{ \"type\": \"number\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/row",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "row"
+            },
+            "definition": {
+                "en": "It's to indicate the row number of a cell in a spreadsheet."
+            },
+            "inlineSchema": "{ \"type\": \"number\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/section",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "section"
+            },
+            "definition": {
+                "en": "It's to indicate the section this statement is related to, used for ebook in AcrossX."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/supplemental-info",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "supplemental-info"
+            },
+            "definition": {
+                "en": "It's the hint available for the Actor to answer a question, or supplemental information for an object."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/time-limit",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "time-limit"
+            },
+            "definition": {
+                "en": "It's to indicate the time constraint of an assessment object."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/total-items",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "total-items"
+            },
+            "definition": {
+                "en": "It's to indicate total items in an assessment object."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/total-pages",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "total-pages"
+            },
+            "definition": {
+                "en": "It's to indicate the total pages of a book or a slide-deck."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/total-score",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "total-score"
+            },
+            "definition": {
+                "en": "It's to indicate total score of an assessment object."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/type",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "type"
+            },
+            "definition": {
+                "en": "A category of people or things having common characteristics."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/mentionedagent",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "mentionedagent"
+            },
+            "definition": {
+                "en": "It's to indicate an agent mentioned in a discussion, the value must be one type of Inverse Functional Identifier."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/school",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "school"
+            },
+            "definition": {
+                "en": "It's to indicate an institution designed to provide learning spaces and learning environments for the teaching of students under the direction of teachers."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/rubrics",
+            "type": "ResultExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "rubrics"
+            },
+            "definition": {
+                "en": "It's the rubrics teachers use to evaluate Actor's performance or outcomes."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/starting-point",
+            "type": "ResultExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "starting-point"
+            },
+            "definition": {
+                "en": "The initial point from which the Actor begins an activity. For example, starting to play a video from a specific position in the video timeline. Goes along with Ending Point. Can be used with types of media and/or activities other than video."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/extensions/time",
+            "type": "ResultExtension",
+            "inScheme": "https://w3id.org/xapi/acrossx/v/2",
+            "prefLabel": {
+                "en": "time"
+            },
+            "definition": {
+                "en": "It's a value representing a position on a timeline of an activity, should be in ISO8601 format."
+            },
+            "inlineSchema": "{ \"type\": \"string\", \"format\": \"date-time\", \"pattern\": \"^\\\\d{4}\\\\-\\\\d{2}\\\\-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}Z$\" }"
+        }
+    ]
+}

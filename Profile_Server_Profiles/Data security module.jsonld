@@ -1,0 +1,48 @@
+{
+    "id": "https://profiles.adlnet.gov/xapi/71d1605b-b078-4494-b7b8-7f3a2b442f36",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Data security module",
+        "de": "Datenschutz Lernmodul"
+    },
+    "definition": {
+        "en": "Collects statements for a data security learning module",
+        "de": "Sammelt Statements für ein Datenschutzmodul"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://profiles.adlnet.gov/xapi/71d1605b-b078-4494-b7b8-7f3a2b442f36/v/2",
+            "wasRevisionOf": [
+                "https://profiles.adlnet.gov/xapi/71d1605b-b078-4494-b7b8-7f3a2b442f36/v/1"
+            ],
+            "generatedAtTime": "2022-08-30T13:07:16.644Z"
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/71d1605b-b078-4494-b7b8-7f3a2b442f36/v/1",
+            "generatedAtTime": "2022-08-25T18:46:05.828Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "katho",
+        "url": "http://www.katho-nrw.de"
+    },
+    "concepts": [
+        {
+            "id": "https://profiles.adlnet.gov/xapi/71d1605b-b078-4494-b7b8-7f3a2b442f36/verb/chapter_introduction",
+            "type": "Verb",
+            "inScheme": "https://profiles.adlnet.gov/xapi/71d1605b-b078-4494-b7b8-7f3a2b442f36/v/2",
+            "prefLabel": {
+                "en": "Chapter Introduction finished",
+                "de": "kapitel_einfuehrung_beendet"
+            },
+            "definition": {
+                "en": "Finished the introduction chapter",
+                "de": "Das Kapitel Einführung wurde beendet"
+            }
+        }
+    ]
+}

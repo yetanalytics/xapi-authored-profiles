@@ -1,0 +1,642 @@
+{
+    "id": "https://xapi.org.au/contentprofile",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Content Repository"
+    },
+    "definition": {
+        "en": "This is a profile for describing content repository items and interactions with content items. These include materials published to CMS, LMS etc.\n\nIt provides new terms and also alternatives to terms that otherwise are found only in deprecated profiles such as Activity Streams 1.0."
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://xapi.org.au/contentprofile/v/2",
+            "wasRevisionOf": [
+                "https://xapi.org.au/contentprofile/v/1"
+            ],
+            "generatedAtTime": "2021-12-08T03:59:23.156Z"
+        },
+        {
+            "id": "https://xapi.org.au/contentprofile/v/1",
+            "generatedAtTime": "2021-05-21T13:38:29.158Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "xAPI User Group",
+        "url": "https://xapi.org.au/"
+    },
+    "concepts": [
+        {
+            "id": "https://xapi.org.au/contentprofile/extension/count",
+            "type": "ContextExtension",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "count",
+                "bn": "সংখ্যা",
+                "fr": "Nombre "
+            },
+            "definition": {
+                "en": "This extension denotes the number if items in a list, repository or collection. ",
+                "bn": "এই এক্সটেনশনটি কোনও তালিকা, রিপোজিটরি বা সংগ্রহের আইটেমগুলি হলে সংখ্যাটি বোঝায়।",
+                "fr": "Cette extension indique le nombre d’elements dans une liste, une  logithèque ou un recueil."
+            },
+            "inlineSchema": "{\"type\": \"integer\"}"
+        },
+        {
+            "id": "https://xapi.org.au/contentprofile/activitytype/survey",
+            "type": "ActivityType",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "survey",
+                "bn": "জরিপ",
+                "fr": "Questionnaire "
+            },
+            "definition": {
+                "en": "A poll, question or set of questions posed of one or more participants to determine their viewpoints or the manner in which they act.",
+                "bn": "এক বা একাধিক অংশগ্রহণকারীতাদের দৃষ্টিভঙ্গি বা তারা যেভাবে কাজ করে তা নির্ধারণ করার জন্য একটি জরিপ, প্রশ্ন বা প্রশ্নের সেট উত্থাপিত হয়েছিল।",
+                "fr": "Un sondage, une question ou un ensemble de questions posees a un, ou plusieurs participants pour determiner leurs points de vue ou la maniere dont ils agissent. "
+            }
+        },
+        {
+            "id": "https://xapi.org.au/contentprofile/verb/withdrew",
+            "type": "Verb",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "withdrew",
+                "fr": "Retiré"
+            },
+            "definition": {
+                "en": "The actor withdrew the object from a service or course. Should be used in conjunction with a context clause that denotes the service from which the object was removed.",
+                "fr": "L' actor  a retiré l'objet d'un service ou d'un cours. Devrait etre utilise en conjonction avec un contexte de clause qui dénote le service duquel l'objet a ete retire"
+            }
+        },
+        {
+            "id": "https://xapi.org.au/contentprofile/verb/added",
+            "type": "Verb",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "added",
+                "fr": "Ajouté"
+            },
+            "definition": {
+                "en": "The actor added the object to a target which may be a collection, list, course or service. Should be used in conjunction with a context clause that denotes the list/collection/service to which the object was added.\n\nNote that this verb can be used in place of the (deprecated) Activity Streams verb add.",
+                "fr": "L'actor a ajoutée l'objet a une cible qui peut etre un recueil, une liste, des cours ou un service. Devrait etre utilise en conjonction avec un contexte de clause qui denote la liste/la serie/ le service duquel l'objet a ete ajoute. A noter que ce verbe peut etre utilise a la place du verbe (obsolete) Activity Streams verb add"
+            }
+        },
+        {
+            "id": "https://xapi.org.au/contentprofile/verb/commenced",
+            "type": "Verb",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "commenced",
+                "fr": "Commencé"
+            },
+            "definition": {
+                "en": "The actor initiated the activity described by the object.\n\nCan be used in place of the (deprecated) Activity Streams Profile verb \"Start\"",
+                "fr": "L'acteur a initié l'activity decrit par le sujet. Il peut etre utilise a la place de l'obsolete verbe ‘demarrer’ dans l’ Activity Streams Profile"
+            }
+        },
+        {
+            "id": "https://xapi.org.au/contentprofile/activitytype/collection",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "collection",
+                    "fr": "Collection"
+                },
+                "description": {
+                    "en": "Represents a generic collection of objects of any type. This object type can be used, for instance, to represent a collection of files like a folder; a collection of photos like an album; and so forth. Objects of this type MAY contain an additional objectTypes property whose value is an Array of Strings specifying the expected objectType of objects contained within the collection. It may also include the extension content-type.\n\nThis term is recommended for use in place of the deprecated term 'collection' as found in the Activity Streams profile.",
+                    "fr": "Represente une collection general d’objets en tout genre. Ce g d'objet peut etre utilise par exemple pour representer un recueil de documents dans un dossier, ou une collection de photos dans un album et ainsi de suite. Les objects de ce type peuvent contenir des proprietees supplementaires appellees objectTypes dont la valeur est une chaine de caracteres precisant les resultats escomptes de l'objectType a l'interieur des objets contenues dans la collection. Il peut aussi inclure l'extension du content type.  Il est preferable d'utiliser ce terme a la place du terme obsolete  'collection' que l'on peut retrouver dans le profile  Activity Streams"
+                },
+                "type": "https://xapi.org.au/contentprofile/activitytype/collection"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/journal_article",
+            "type": "ActivityType",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "Journal Article",
+                "fr": "Article de Journal "
+            },
+            "definition": {
+                "en": "Smaller than a book, an article is devoted to a particular topic and is typically written by a specialist or expert in the subject. These are published in collections (Journals).",
+                "fr": "Plus petit qu’un livre, un article est dédie a un sujet particuler et est generalement ecrit par un specialiste ou un expert en la matiere. Ceux-ci sont publies dans un recueil d’articles. \n"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/audio_recording",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Audio Recording",
+                    "fr": "Enregistrement Audio  "
+                },
+                "description": {
+                    "en": "A recording of sound that is made on any medium or device and which is capable of being reproduced",
+                    "fr": "Un enregistrement de son créer avec n’importe quel support ou appareil capable de reproduire le son "
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/audio_recording",
+                "extensions": "\"{\\\"http://xapi.org.au/contentprofile/extension/course_code\\\":\\\"SCI101\\\",\\\"http://xapi.org.au/contentprofile/extension/academic_term\\\":\\\"Term 2\\\",\\\"http://xapi.org.au/contentprofile/extension/academic_year\\\":\\\"2021\\\",\\\"http://xapi.org.au/contentprofile/extension/doi\\\":\\\"1234567890\\\",\\\"http://xapi.org.au/contentprofile/extension/issn\\\":\\\"1234567890\\\",\\\"http://xapi.org.au/contentprofile/extension/citation_info\\\":{\\\"x\\\":\\\"y\\\",\\\"a\\\":\\\"b\\\"}}\""
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/archive",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Archive",
+                    "fr": "Archive "
+                },
+                "description": {
+                    "en": "A collection of historical records or a place where such records are kept. For example, it may refer to a computer file containing information that is not currently in use but may be required in the future.",
+                    "fr": "Un recueil de documents historiques ou, l’endroit ou ces documents sont conserves"
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/archive"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/three_dimensional_model",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Three Dimensional Model",
+                    "fr": "Model Tridimensionnel  "
+                },
+                "description": {
+                    "en": "A physical construction or a three&ndash;dimensional graphical depiction of an object or concept in such a way that three dimensions (such as height, width and depth) are measurable.",
+                    "fr": "Indique une construction physique ou alors une representation graphique en trois dimensions d’un objet ou d’un concept de telle maniere que trois dimensions (c’est a dire la hauteur,largeur et profondeur) sont quantifiables"
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/three_dimensional_model"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/book_extract",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Book Extract",
+                    "fr": "Extrait de livre "
+                },
+                "description": {
+                    "en": "A portion of a book. This extension may be accompanied by the isbn, starting&ndash;point and ending&ndash;point extensions from the tincanapi profile to denote the identity and relevant portion of the book from which the extraction has been taken.",
+                    "fr": "Une partie d’un livre. Cette extension peut etre accompagnee par le ISBN qui correspond au point de depart et d’arrivee des extensions du profile tincanapi  indiquant l’identite et la partie pertinente du livre dont l’extraction a ete faite. "
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/book_extract"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/case_study",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Case Study",
+                    "fr": "étude de cas  "
+                },
+                "description": {
+                    "en": "An intensive study about a particular example of something (often a specific person or sample group within a population) to illustrate a generalised hypothesis or principle",
+                    "fr": "Etude approfondie se pencher sur un cas en particulier. Elle vise l'étude approfondie d'un cas spécifié, qu'il soit une personne, un groupe ou un sujet spécifique.  "
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/case_study"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/conference_paper",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Conference Paper",
+                    "fr": "Document de conference  "
+                },
+                "description": {
+                    "en": "An academic or professional contribution to a conference or workshop. It will often be delivered in both written and oral form.",
+                    "fr": "Un contribution academique ou professionelle lors d’une conference ou d’un seminaire. Il est generalement fourni a l’ecrit ou de maniere orale. "
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/conference_paper"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/database",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Database",
+                    "bn": "ডাটাবেস"
+                },
+                "description": {
+                    "en": "A structured set of data held in a computer, especially one that is accessible in various ways. Often (but not invariably) a database is managed within a dedicated data storage and retrieval application.",
+                    "bn": "একটি কম্পিউটারে রাখা তথ্যের একটি কাঠামোগত সেট, বিশেষত একটি যা বিভিন্ন উপায়ে পাওয়া যায়। প্রায়শই (কিন্তু অবধারিতভাবে নয়) একটি ডাটাবেস একটি নিবেদিত ডেটা স্টোরেজ এবং পুনরুদ্ধার অ্যাপ্লিকেশনের মধ্যে পরিচালিত হয়।"
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/database"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/dissertation",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Dissertation"
+                },
+                "description": {
+                    "en": "An extended essay on a particular subject, often written for a university degree or diploma, most often at postgraduate level. Unlike a thesis, a dissertation generally does not focus primarily on original research and comprises a broader overview of an area."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/dissertation"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/government_publication",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Government Publication"
+                },
+                "description": {
+                    "en": "A publication that has been published or authored by a government department."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/government_publication"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/grant_application",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Grant Application"
+                },
+                "description": {
+                    "en": "Documentation prepared to support an application for a financial grant, especially to facilitate an activity such as research, community service or participation in a conference or professional association."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/grant_application"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/image",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Image"
+                },
+                "description": {
+                    "en": "A visual representation of something. It may be used to denote a viewable object such as a drawing, painting or printed image, but may also refer to a digitised file that can be interpreted by image rendering software, for example a file in a format such as gif, png or jpeg."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/image"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/legal_document",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Legal Document"
+                },
+                "description": {
+                    "en": "Also known as a legal instrument, a legal document is a formally executed written document that expresses and evidences a legally enforceable act, process, or duty, obligation or entitlement."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/legal_document"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/legislation",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Legislation"
+                },
+                "description": {
+                    "en": "A documented law created by a government. This Activity Type may be used to refer to verbatim publication of a law."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/legislation"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/libguide",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "LibGuide"
+                },
+                "description": {
+                    "en": "An assembly of a library's resources around a topic that is available via a LibGuide content management system. Each LibGuide brings together a range of information about a particular subject or course of study."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/libguide"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/manuscript",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Manuscript"
+                },
+                "description": {
+                    "en": "A handwritten or typewrittten document as distinct from a printed document."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/manuscript"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/newspaper",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Newspaper"
+                },
+                "description": {
+                    "en": "An entire edition of a serial publication devoted to news on current events."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/newspaper"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/newspaper_article",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Newspaper Article"
+                },
+                "description": {
+                    "en": "An individual article (sometimes called a story) excised from a serial publication devoted to news on current events."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/newspaper_article"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/pamphlet",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Pamphlet"
+                },
+                "description": {
+                    "en": "A short, unbound booklet on a single subject."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/pamphlet"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/presentation",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Presentation"
+                },
+                "description": {
+                    "en": "A speech or talk in which a new product, idea, or piece of work is shown and explained to an audience. This Activity Type may also refer to a recording of such a speech or talk. Note that the more specific Activity Type slide deck is available to identify copies of materials presented to the audience during the course of a presentation."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/presentation"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/reference_entry",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Reference Entry"
+                },
+                "description": {
+                    "en": "An attribution associated with a direct quote or paraphrasing of work sourced from a third party."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/reference_entry"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/review_publication",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Review Publication"
+                },
+                "description": {
+                    "en": "A summary of previously published studies on a topic, perhaps submitted to a review journal for publication. Unlike a journal article, a review publication does not report new facts or analysis."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/review_publication"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/series",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Series"
+                },
+                "description": {
+                    "en": "A sequence of documents, events, articles, television shows or other objects of a similar or related kind that are arranged in an order."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/series"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/standards_document",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Standards Document"
+                },
+                "description": {
+                    "en": "A document whose content has received endorsement by a recognised authority and provides requirements, specifications, guidelines or characteristics that can be used consistently to ensure that materials, products, processes and services are fit for their purpose"
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/standards_document"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/technical_report",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Technical Report"
+                },
+                "description": {
+                    "en": "A document detailing the process, progress or results of a technical or research project. Rarely peer reviewed, a technical report is a document that is similar to but does not have the status of a journal article or conference paper."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/technical_report"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/thesis",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Thesis",
+                    "bn": "থিসিস"
+                },
+                "description": {
+                    "en": "A long essay involving original research that has been written by a candidate for a university degree, usually at postgraduate level. For avoidance of doubt, this Activity Type should not be used to refer to an hypothesis or theory itself and refers to a written thesis.",
+                    "bn": "মূল গবেষণার সাথে জড়িত একটি দীর্ঘ প্রবন্ধ যা বিশ্ববিদ্যালয়ের ডিগ্রির জন্য একজন প্রার্থী দ্বারা লেখা হয়েছে, সাধারণত স্নাতকোত্তর স্তরে। সন্দেহ পরিহারের জন্য, এই ক্রিয়াকলাপ প্রকারটি একটি অনুমান বা তত্ত্বকে বোঝাতে ব্যবহার করা উচিত নয় এবং একটি লিখিত থিসিসকে বোঝায়।"
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/thesis"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/working_paper",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Working Paper"
+                },
+                "description": {
+                    "en": "A preliminary scientific or technical paper or preprint. Working papers are often distributed in order to promote discussion or elicit feedback prior to redrafting the report for formal publication "
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/working_paper"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/computer_program",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Computer Program"
+                },
+                "description": {
+                    "en": "A sequence of instructions that a computer can execute or interpret."
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/computer_program"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/activitytype/other_content",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "Other Content"
+                },
+                "description": {
+                    "en": "A content object whose type is not defined as an activity type within this or any other xAPI profile"
+                },
+                "type": "http://xapi.org.au/contentprofile/activitytype/other_content"
+            }
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/extension/course_code",
+            "type": "ContextExtension",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "Course Code"
+            },
+            "definition": {
+                "en": "Value is an alphanumeric code that is generated by and assigned to courses by an academic or other educational institution or authority. While generally unique within an organisation, a course code is not globally unique."
+            },
+            "inlineSchema": "{\"value\":\"string\"}"
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/extension/academic_term",
+            "type": "ContextExtension",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "Academic Term"
+            },
+            "definition": {
+                "en": "Value is an integer that denotes the \"term\" (portion of an academic year) in which this course was delivered."
+            },
+            "inlineSchema": "{\"value\":\"string\"}"
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/extension/academic_year",
+            "type": "ContextExtension",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "Academic Year"
+            },
+            "definition": {
+                "en": "Value is the year during which a particular course was delivered."
+            },
+            "inlineSchema": "{\"value\":\"numeric\"}"
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/extension/doi",
+            "type": "ContextExtension",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "DOI"
+            },
+            "definition": {
+                "en": "Value is the Digital Object Identifier (DOI) - a unique alphanumeric string assigned by the International DOI Foundation to identify content and provide a persistent link to its location on the internet. The publisher assigns a DOI when your article is published and made available electronically. (Reference: https://apastyle.apa.org/learn/faqs/what-is-doi)\n"
+            },
+            "inlineSchema": "{\"value\":\"string\"}"
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/extension/issn",
+            "type": "ContextExtension",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "ISSN"
+            },
+            "definition": {
+                "en": "Value is an the 8-digit ISSN (International Standard Serial Number) code used to identify newspapers, journals, magazines and periodicals of all kinds and on all media–print and electronic. (Reference: https://www.issn.org/)"
+            },
+            "inlineSchema": "{\"value\":\"string\"}"
+        },
+        {
+            "id": "http://xapi.org.au/contentprofile/extension/citation_info",
+            "type": "ContextExtension",
+            "inScheme": "https://xapi.org.au/contentprofile/v/2",
+            "prefLabel": {
+                "en": "Citation Info"
+            },
+            "definition": {
+                "en": "Value is a list of arbitrary keyword:value pairs that may be used to identify the content. Keywords may consist of any identifier for which an existing dedication extension is not available.\n"
+            },
+            "inlineSchema": "{\"value\":\"list\"}"
+        }
+    ]
+}

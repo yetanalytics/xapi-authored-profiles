@@ -1,0 +1,83 @@
+{
+    "id": "https://w3id.org/xapi/langexperiment",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Language Experiment"
+    },
+    "definition": {
+        "en": "We will attempt to see if a language profile through the application of two profiles"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://w3id.org/xapi/langexperiment/v/1",
+            "generatedAtTime": "2022-10-05T19:17:45.262Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "Language Experiment",
+        "url": "https://bit.ly/languageprofilexercise"
+    },
+    "templates": [
+        {
+            "id": "https://w3id.org/xapi/langexperiment/general",
+            "type": "StatementTemplate",
+            "inScheme": "https://w3id.org/xapi/langexperiment/v/1",
+            "prefLabel": {
+                "en": "Language Experiment General Template"
+            },
+            "definition": {
+                "en": "An attempt to apply a language to all Statements via template in one pass"
+            },
+            "rules": [
+                {
+                    "location": "$.verb.display.zu",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.name.zu",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.description.zu",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.parent[*].definition.name.zu",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.parent[*].definition.description.zu",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.grouping[*].definition.name.zu",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.grouping[*].definition.description.zu",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].definition.name.zu",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].definition.description.zu",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.other[*].definition.name.zu",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.other[*].definition.description.zu",
+                    "presence": "recommended"
+                }
+            ]
+        }
+    ]
+}

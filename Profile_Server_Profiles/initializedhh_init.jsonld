@@ -1,0 +1,26 @@
+{
+    "id": "https://profiles.adlnet.gov/xapi/b0085953-4e4e-4429-ba4e-afd6746095c4",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "initializedhh_init",
+        "ko": "해설"
+    },
+    "definition": {
+        "en": "initializedhh init",
+        "ko": "하다"
+    },
+    "seeAlso": "https://xapi-profile.bubblecon.io//project/60/activity/36/statement/44",
+    "versions": [
+        {
+            "id": "https://profiles.adlnet.gov/xapi/b0085953-4e4e-4429-ba4e-afd6746095c4/v/1",
+            "generatedAtTime": "2024-08-24T12:46:17.841Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "hhanny",
+        "url": "https://test"
+    }
+}

@@ -1,0 +1,308 @@
+{
+    "id": "https://w3id.org/xapi/performance-support",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Performance Support Profile"
+    },
+    "definition": {
+        "en": "The Performance Support Profile was created to identify and standardize the common types of performance support concepts and interactions that can be tracked with xAPI."
+    },
+    "seeAlso": "https://w3id.org/xapi/navy",
+    "versions": [
+        {
+            "id": "https://w3id.org/xapi/performance-support/v/6",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/performance-support/v/5"
+            ],
+            "generatedAtTime": "2024-08-24T12:48:22.425Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/v/5",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/performance-support/v/4"
+            ],
+            "generatedAtTime": "2024-08-24T12:42:30.477Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/v/4",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/performance-support/v/3"
+            ],
+            "generatedAtTime": "2024-08-24T12:31:16.544Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/v/3",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/performance-support/v/2"
+            ],
+            "generatedAtTime": "2021-08-30T20:49:53.483Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/v/2",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/performance-support/v/1"
+            ],
+            "generatedAtTime": "2021-04-07T20:36:39.249Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/v/1",
+            "generatedAtTime": "2020-11-05T18:40:02.955Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "US Navy",
+        "url": "https://w3id.org/xapi/navy"
+    },
+    "concepts": [
+        {
+            "id": "https://w3id.org/xapi/performance-support/verb/searched",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "searched"
+            },
+            "definition": {
+                "en": "Indicates the Actor used an internal search engine or other software to search for a term."
+            },
+            "deprecated": true,
+            "relatedMatch": [
+                "https://w3id.org/xapi/acrossx/verbs/searched"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/performance-support/activity-types/application",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "application"
+            },
+            "definition": {
+                "en": "Any software application that performs specific functions."
+            },
+            "deprecated": true,
+            "relatedMatch": [
+                "http://activitystrea.ms/application"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/performance-support/activity-types/image",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "performance-support"
+            },
+            "definition": {
+                "en": "A digital representation of a resource such as a photograph, diagram, or illustration."
+            },
+            "deprecated": true,
+            "relatedMatch": [
+                "http://activitystrea.ms/image"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/performance-support/verbs/searched",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "searched"
+            },
+            "definition": {
+                "en": "Indicates the Actor used an internal search engine or other software to search for a term."
+            },
+            "deprecated": true,
+            "relatedMatch": [
+                "http://activitystrea.ms/search"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/performance-support/activity-types/procedure",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "procedure"
+            },
+            "definition": {
+                "en": "A procedure is a sequence of steps that are followed systematically to achieve a task or make a decision."
+            },
+            "deprecated": true
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/verbs/searched",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "searched"
+            },
+            "definition": {
+                "en": "Indicates the Actor used a search engine or other software to search for a term."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/activity-types/application",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "application"
+            },
+            "definition": {
+                "en": "Any software application that performs specific functions."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/activity-types/image",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "image"
+            },
+            "definition": {
+                "en": "A digital representation of a resource such as a photograph, diagram, or illustration."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/activity-types/procedure",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "procedure"
+            },
+            "definition": {
+                "en": "A procedure is a sequence of steps that are followed systematically to achieve a task or make a decision."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/verbs/deselected",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "deselected"
+            },
+            "definition": {
+                "en": "Indicates that the Actor deselected an object from a collection or set to use it in an Activity."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/activity-types/task",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "task"
+            },
+            "definition": {
+                "en": "A task is a collection of steps that results in a specific performance outcome. "
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/extensions/procedure-metadata",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "procedure-metadata"
+            },
+            "definition": {
+                "en": "An array of Procedure Metadata objects that contain  additional  procedure metadata. The properties are listed below and their requirements are provided in the Procedure Metadata table in the profile document at https://w3id.org/xapi/navy."
+            },
+            "schema": "https://w3id.org/xapi/performance-support/extensions/procedure-metadata"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/extensions/step-metadata",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "step-metadata"
+            },
+            "definition": {
+                "en": "A Step Metadata object that contains additional step metadata"
+            },
+            "schema": "https://w3id.org/xapi/performance-support/extensions/step-metadata"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/extensions/launch-mode",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "launch-mode"
+            },
+            "definition": {
+                "en": "A value that indicates the mode of which the performance support content is launched."
+            },
+            "schema": "https://w3id.org/xapi/performance-support/extensions/launch-mode",
+            "context": "https://w3id.org/xapi/performance-support/extensions/launch-mode"
+        }
+    ],
+    "templates": [
+        {
+            "id": "https://w3id.org/xapi/performance-support/netc/templates#initialized-application",
+            "type": "StatementTemplate",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "initialized application"
+            },
+            "definition": {
+                "en": "Statement template used for for initializing a performance support application."
+            },
+            "deprecated": true,
+            "verb": "http://adlnet.gov/expapi/verbs/initialized",
+            "objectActivityType": "https://w3id.org/xapi/performance-support/performance-support/activity-types/application",
+            "rules": [
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.platform",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included",
+                    "any": [
+                        "https://w3id.org/xapi/performance-support/v1.0"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/netc/templates#terminated-application",
+            "type": "StatementTemplate",
+            "inScheme": "https://w3id.org/xapi/performance-support/v/6",
+            "prefLabel": {
+                "en": "terminated-application"
+            },
+            "definition": {
+                "en": "Statement template used for terminating a performance support application."
+            },
+            "deprecated": true,
+            "verb": "http://adlnet.gov/expapi/verbs/terminated",
+            "objectActivityType": "https://w3id.org/xapi/performance-support/performance-support/activity-types/application",
+            "rules": [
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.platform",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included",
+                    "any": [
+                        "https://w3id.org/xapi/performance-support/v1.0"
+                    ]
+                }
+            ]
+        }
+    ]
+}

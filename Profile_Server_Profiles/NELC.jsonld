@@ -1,0 +1,40 @@
+{
+    "id": "http://profiles.usalearning.net/xapi/NELC",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "NELC"
+    },
+    "definition": {
+        "en": "This profile will try to collect learner engagement to measure the progress in a course or a program. It will define verbs, activities, extensions and so on."
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "http://profiles.usalearning.net/xapi/NELC/v/1",
+            "generatedAtTime": "2021-12-14T22:34:30.863Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "NELC",
+        "url": "https://github.com/khalidreemy"
+    },
+    "concepts": [
+        {
+            "id": "http://profiles.usalearning.net/xapi/NELC/extension/instructor",
+            "type": "ContextExtension",
+            "inScheme": "http://profiles.usalearning.net/xapi/NELC/v/1",
+            "prefLabel": {
+                "en": "instructor"
+            },
+            "definition": {
+                "en": "The instructor is a JSON object contaning the following properties: \\\"email\\\": learner-email \\\"name\\\": learner name"
+            },
+            "deprecated": true,
+            "schema": "http://futurex.nelc.gov.sa/xapi/NELC/extension/instructor",
+            "context": ""
+        }
+    ]
+}

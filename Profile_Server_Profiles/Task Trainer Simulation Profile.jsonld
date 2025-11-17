@@ -1,0 +1,176 @@
+{
+    "id": "https://w3id.org/xapi/task-trainer-simulation",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Task Trainer Simulation Profile"
+    },
+    "definition": {
+        "en": "A Task Trainer (TT) Simulation provides the ability to train critical and key task steps in documented, well-defined procedures. This category of simulation allows students to focus on their technical skill development through the application of knowledge in a manner that mimics the performance of their job in the Fleet. It gives students the opportunity for repeated practice to achieve mastery of those skill sets. The TT Simulation Profile is an extension of the xAPI Simulation Base Profile. It takes into consideration the related best practices for extending that Profile to support TT Simulation content’s unique characteristics and data tracking requirements. TT Simulation content can cover a wide range of systems and equipment."
+    },
+    "seeAlso": "https://w3id.org/xapi/navy",
+    "versions": [
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/task-trainer-simulation/v/1"
+            ],
+            "generatedAtTime": "2024-08-24T13:22:17.671Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/v/1",
+            "generatedAtTime": "2021-05-21T13:38:29.158Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "US Navy",
+        "url": "https://w3id.org/xapi/navy"
+    },
+    "concepts": [
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/verbs/received",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "received"
+            },
+            "definition": {
+                "en": "Presented with or given an object during a procedure."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/verbs/restarted",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "restarted"
+            },
+            "definition": {
+                "en": "Started an exited attempt on an Activity"
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/verbs/used",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "used"
+            },
+            "definition": {
+                "en": "Referenced or applied an object during a procedure."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/activity-types/feedback-corrective",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "feedback-corrective"
+            },
+            "definition": {
+                "en": "A multimedia intervention that improves or corrects training performance."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/activity-types/feedback-error",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "feedback-error"
+            },
+            "definition": {
+                "en": "A notice that informs of an illogical condition that prohibits continuation of task."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/activity-types/feedback-performance",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "feedback-performance"
+            },
+            "definition": {
+                "en": "A notice that informs of the degree of training performance in relation to a standard."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/activity-types/feedback-safety",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "feedback-safety"
+            },
+            "definition": {
+                "en": "A multimedia intervention that informs of or corrects safety violations that occur during training performance."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/activity-types/task-trainer-document",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "task-trainer-document"
+            },
+            "definition": {
+                "en": "A digital resource for storing the task steps for a work package or procedure in a specific format on a computer."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/activity-types/task-trainer-scenario",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "task-trainer-scenario"
+            },
+            "definition": {
+                "en": "A single or set of simulated preconditions or states within simulated hardware or software systems that requires the completion of one or more work packages or procedures to complete a simulated job task."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/activity-types/task-trainer-step",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "task-trainer-step"
+            },
+            "definition": {
+                "en": "The representation of a step within a task that is performed to complete the task on simulated hardware equipment or software applications."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/activity-types/task-trainer-task",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "task-trainer-task"
+            },
+            "definition": {
+                "en": "The representation of a set of prescribed steps within a work package or procedure that is performed to complete a task on simulated hardware equipment or software applications."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/activity-types/task-trainer-tool",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "task-trainer-tool"
+            },
+            "definition": {
+                "en": "A simulated tool or equipment used to complete a maintenance step."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/simulation/activities/test-test",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/task-trainer-simulation/v/2",
+            "prefLabel": {
+                "en": "test-test"
+            },
+            "definition": {
+                "en": "test"
+            }
+        }
+    ]
+}

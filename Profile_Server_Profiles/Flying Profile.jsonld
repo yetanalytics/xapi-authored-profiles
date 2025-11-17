@@ -1,0 +1,392 @@
+{
+    "id": "https://pttportal.af.mil/xapi/profile/flying",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Flying Profile"
+    },
+    "definition": {
+        "en": "A profile for describing flying experiences."
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "generatedAtTime": "2023-07-11T08:04:30.652Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "19th Air Force",
+        "url": "https://www.aetc.af.mil/Units/19th-Air-Force/"
+    },
+    "concepts": [
+        {
+            "id": "https://pttportal.af.mil/xapi/activity-type/maneuver",
+            "type": "ActivityType",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "prefLabel": {
+                "en": "maneuver"
+            },
+            "definition": {
+                "en": "A named maneuver completed during a sortie. "
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/activity/sortie",
+            "type": "Activity",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "sortie"
+                },
+                "description": {
+                    "en": "A specific single flight by an individual aircraft"
+                },
+                "type": "https://example.com/xapi/activity-type/flight-operation"
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/activity-type/flight-operation",
+            "type": "ActivityType",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "prefLabel": {
+                "en": "flight-operation"
+            },
+            "definition": {
+                "en": "an activity type to encompass flying activities which do not fall under other activity types"
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/activity/mission",
+            "type": "Activity",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "mission"
+                },
+                "description": {
+                    "en": "A sortie or collection of sorties executed for a specific purpose."
+                },
+                "type": "https://pttportal.af.mil/xapi/activity-type/flight-operation"
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/activity/approach",
+            "type": "Activity",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "approach"
+                },
+                "description": {
+                    "en": "the phase of flight in which the aircraft approaches the runway in preparation for landing"
+                },
+                "type": "https://pttportal.af.mil/xapi/activity-type/maneuver"
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/activity/climb",
+            "type": "Activity",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "climb"
+                },
+                "description": {
+                    "en": "the phase of flight in which the aircraft increases its altitude after takeoff"
+                },
+                "type": "https://pttportal.af.mil/xapi/activity-type/maneuver"
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/activity/descent",
+            "type": "Activity",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "descent"
+                },
+                "description": {
+                    "en": "the phase of flight in which the aircraft decreases its altitude in preparation for landing"
+                },
+                "type": "https://pttportal.af.mil/xapi/activity-type/maneuver"
+            }
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/activity/landing",
+            "type": "Activity",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "landing"
+                },
+                "description": {
+                    "en": "the phase of flight in which the aircraft comes to rest on the ground"
+                },
+                "type": "https://pttportal.af.mil/xapi/activity-type/maneuver"
+            }
+        }
+    ],
+    "templates": [
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/flying/templates/sortie",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "prefLabel": {
+                "en": "sortie"
+            },
+            "definition": {
+                "en": "For statements where the activity object is a sortie. "
+            },
+            "rules": [
+                {
+                    "location": "$.object.definition.extensions.sortie-id",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "a)\tThe object.definition.extensions property SHOULD include the extension: https://example.com/xapi/extension/sortie-id\ni.\tThe value of the sortie-id extension SHOULD be set to a value that is unique to the particular sortie being described\n"
+                    }
+                },
+                {
+                    "location": "$.context.instructor",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "b)\tWhen the actor is a student pilot, the context.instructor property SHOULD be set to a value that describes the instructor who oversaw the sortie.\ni.\tThe instructor SHOULD be described using the guidance for describing individual actors found in the 19 AF Core Profile\n"
+                    }
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/aircraft-model-variant']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/aircraft-tail-number']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/training-role']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/solo-flight']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/cockpit-seat']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/flying/templates/maneuver",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "prefLabel": {
+                "en": "maneuver"
+            },
+            "definition": {
+                "en": "For statements where the object's activity type is maneuver."
+            },
+            "objectActivityType": "https://pttportal.af.mil/xapi/activity-type/maneuver",
+            "rules": [
+                {
+                    "location": "$.context.contextActivities.parent",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "When an activity object is of the maneuver type, The first element of the context.contextActivites.parent array SHOULD be set to the sortie activity. The extensions property of the sortie activity SHOULD include the extension: https://example.com/xapi/extension/sortie-id. The value of the sortie-id extension SHOULD be set to the unique id representing the sortie of which the maneuver is a part\n"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/statement-template/takeoff",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "prefLabel": {
+                "en": "takeoff"
+            },
+            "definition": {
+                "en": "For statements the object of which is the takeoff activity."
+            },
+            "objectActivityType": "https://pttportal.af.mil/xapi/activity-type/maneuver",
+            "rules": [
+                {
+                    "location": "$.object.definition.type",
+                    "any": [
+                        "https://pttportal.af.mil/xapi/activity-type/maneuver"
+                    ]
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/airfield-location-indicator']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/runway-designator']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/runway-condition']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/weather-data']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/flying/templates/approach",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "prefLabel": {
+                "en": "approach"
+            },
+            "definition": {
+                "en": "For statements the object of which is the approach activity."
+            },
+            "objectActivityType": "https://pttportal.af.mil/xapi/activity-type/maneuver",
+            "rules": [
+                {
+                    "location": "$.object.definition.type",
+                    "any": [
+                        "https://pttportal.af.mil/xapi/activity-type/maneuver"
+                    ]
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/approach-type']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/airfield-location-indicator']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/runway-designator']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/altitude-data']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/heading-data']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/weather-data']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/flying/templates/climb",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "prefLabel": {
+                "en": "climb"
+            },
+            "definition": {
+                "en": "For statements the object of which is the \"climb\" activity."
+            },
+            "objectActivityType": "https://pttportal.af.mil/xapi/activity-type/maneuver",
+            "rules": [
+                {
+                    "location": "$.object.definition.type",
+                    "any": [
+                        "https://pttportal.af.mil/xapi/activity-type/maneuver"
+                    ]
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/altitude-data']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/heading-data']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/weather-data']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/flying/templates/descent",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "prefLabel": {
+                "en": "descent"
+            },
+            "definition": {
+                "en": "For statements the object of which is the \"descent\" activity."
+            },
+            "objectActivityType": "https://pttportal.af.mil/xapi/activity-type/maneuver",
+            "rules": [
+                {
+                    "location": "$.object.definition.type",
+                    "any": [
+                        "https://pttportal.af.mil/xapi/activity-type/maneuver"
+                    ]
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/altitude-data']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/heading-data']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/weather-data']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/flying/templates/landing",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/flying/v/1",
+            "prefLabel": {
+                "en": "landing"
+            },
+            "definition": {
+                "en": "For statements the object of which is the \"landing\" activity."
+            },
+            "objectActivityType": "https://pttportal.af.mil/xapi/activity-type/maneuver",
+            "rules": [
+                {
+                    "location": "$.object.definition.type",
+                    "any": [
+                        "https://pttportal.af.mil/xapi/activity-type/maneuver"
+                    ]
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/airfield-location-indicator']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/runway-designator']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/runway-condition']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/landing-type']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://pttportal.af.mil/xapi/extension/weather-data']",
+                    "presence": "included"
+                }
+            ]
+        }
+    ]
+}

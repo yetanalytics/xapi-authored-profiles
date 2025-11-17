@@ -1,0 +1,37 @@
+{
+    "id": "https://w3id.org/xapi/netc-e-learning",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Navy E-learning Profile"
+    },
+    "definition": {
+        "en": "The Navy e-learning profile is based on the SCORM profile and supports several content types and delivery mediums, such as instructor-led asynchronous or synchronous, self-paced, self-directed, and augmented with a variety of multimedia. More e-learning use cases and types of content may be added to this Profile as requirements are identified. For example, it is expected that collaborative learning environments used with or without an LMS will allow for team-based or group participation in learning or training activities. \n\nWhile  the term \"E-learning\" is often broadly associated with any learning conducted on the internet, Navy  e-learning content currently includes ANY of the following use cases:\n1.\tnewly developed single-learner (self-paced or self-directed), stand-alone web-based learning activities or lessons\n2.\tnewly developed single-learner (self-paced or self-directed) courses or courseware\n3.\tlearning content that may or may not be SCORM-based, but must report data to an LRS in a similar way as a SCORM course \n"
+    },
+    "seeAlso": "https://w3id.org/xapi/navy",
+    "versions": [
+        {
+            "id": "https://w3id.org/xapi/netc-e-learning/v/1",
+            "generatedAtTime": "2021-05-26T17:30:09.501Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "US Navy",
+        "url": "https://w3id.org/xapi/navy"
+    },
+    "concepts": [
+        {
+            "id": "https://w3id.org/xapi/netc-e-learning/activity-types/section",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/netc-e-learning/v/1",
+            "prefLabel": {
+                "en": "section"
+            },
+            "definition": {
+                "en": "A section is used to organize information within a lesson."
+            }
+        }
+    ]
+}

@@ -1,0 +1,260 @@
+{
+    "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "HyFlex classroom profile"
+    },
+    "definition": {
+        "en": "The HyFlex classroom profile provides interactions between students, teachers and learning tools that can occur in HyFlex classroom."
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "wasRevisionOf": [
+                "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/1"
+            ],
+            "generatedAtTime": "2023-11-02T02:13:42.443Z"
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/1",
+            "generatedAtTime": "2023-07-11T08:04:30.652Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "HyFlex classroom",
+        "url": "https://www.kt.com/"
+    },
+    "concepts": [
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/activitytype/class-section",
+            "type": "ActivityType",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "class section"
+            },
+            "definition": {
+                "en": "In a hyflex classroom, there are multiple options available, and it's possible to divide one class into multiple sections."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/activitytype/highlight-video",
+            "type": "ActivityType",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "highlight video"
+            },
+            "definition": {
+                "en": "A video showcasing the actor's outstanding performance during the class."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/verb/drawing",
+            "type": "Verb",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "drwaing"
+            },
+            "definition": {
+                "en": "Drawing on a hyflex classroom whiteboard with a drawing pen or a mouse."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/activitytype/photo",
+            "type": "ActivityType",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "photo"
+            },
+            "definition": {
+                "en": "Represents objects such as  \"captured with a camera,\" for example, assignments captured with a camera."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/activitytype/second-device",
+            "type": "ActivityType",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "second device"
+            },
+            "definition": {
+                "en": "A supplementary device for participating in hyflex classes. For example, there is a pad for drawing."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/activitytype/whisper",
+            "type": "ActivityType",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "whisper"
+            },
+            "definition": {
+                "en": "A message sent privately."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/classroom-subject",
+            "type": "ContextExtension",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "classroom subject"
+            },
+            "definition": {
+                "en": "The subject of the class being conducted in the hyflex classroom."
+            },
+            "inlineSchema": "{\"https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/classroom-subject\" : \"math\"}"
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/activitytype/speak",
+            "type": "ActivityType",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "speak"
+            },
+            "definition": {
+                "en": "Indicates the actor is speaking."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/verb/kick",
+            "type": "Verb",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "kick"
+            },
+            "definition": {
+                "en": "Expelling a student from the hyflex classroom."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/activitytype/concentration",
+            "type": "ActivityType",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "concentration"
+            },
+            "definition": {
+                "en": "Indicator of how engaged a student is in a hyflex class."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/learning-tool",
+            "type": "ContextExtension",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "learning tool"
+            },
+            "definition": {
+                "en": "An object representing the types of learning tools."
+            },
+            "inlineSchema": "{\"https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/learning-tool\" : \"mobile\"}"
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/accuracy-rate",
+            "type": "ResultExtension",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "accuracy rate"
+            },
+            "definition": {
+                "en": "Actor's accuracy rate in quizzes or tests."
+            },
+            "inlineSchema": "{\"https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/accuracy-rate\" : \"90\"}"
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/progress-rate",
+            "type": "ResultExtension",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "progress rate"
+            },
+            "definition": {
+                "en": "Actor's progress rate in quizzes or tests"
+            },
+            "inlineSchema": "{\"https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/progress-rate\" : \"100\"}"
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/verb/proofread",
+            "type": "Verb",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "proofread"
+            },
+            "definition": {
+                "en": "Indicator representing the process where a teacher edits the essays or quiz answers submitted by students."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/satisfaction-score",
+            "type": "ResultExtension",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "satisfaction score"
+            },
+            "definition": {
+                "en": "Indicator of how satisfied one is with the hyflex class."
+            },
+            "inlineSchema": "{\"https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/satisfaction-score\":\"100\"}"
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/verb/revise",
+            "type": "Verb",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "revise"
+            },
+            "definition": {
+                "en": "Re-watching a recording of a completed class."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/type-of-quiz",
+            "type": "ActivityExtension",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "type-of-quiz"
+            },
+            "definition": {
+                "en": "Here are the types of quizzes.\n- Multiple-Choice Quiz\n- Fill-in-the-Blank Quiz\n- Short Answer Quiz\n- Essay Quiz\n- Photo Quiz\n- True/False Quiz\n"
+            },
+            "inlineSchema": "{\"https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/type-of-quiz\" : \"Short Answer Quiz\"}"
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/participation-mode",
+            "type": "ContextExtension",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "participation mode"
+            },
+            "definition": {
+                "en": " The learner's participation mode in a hyflex class.\n- Online sync\n- In-class\n- Async"
+            },
+            "inlineSchema": "{\"https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/extension/participation-mode\" : \"Async\"}"
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/verb/record",
+            "type": "Verb",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "record video"
+            },
+            "definition": {
+                "en": "record the current hyflex class."
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/activitytype/feedback",
+            "type": "ActivityType",
+            "inScheme": "https://profiles.adlnet.gov/xapi/45ffd9b1-dcd2-4cee-87e1-5de83d5159c0/v/2",
+            "prefLabel": {
+                "en": "feedback on class"
+            },
+            "definition": {
+                "en": "Actors can submit feedback on the  hyflex class."
+            }
+        }
+    ]
+}

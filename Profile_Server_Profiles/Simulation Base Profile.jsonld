@@ -1,0 +1,100 @@
+{
+    "id": "https://w3id.org/xapi/simulation",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Simulation Base Profile"
+    },
+    "definition": {
+        "en": "Simulations focus on recreating hardware components, systems, and/or other situations for the purpose of training individuals and teams on these components.  Simulations include, but are not limited to, web-based simulations, desktop simulations, full-scale simulators, part-task trainers, maintenance trainers, and production systems that support a simulation mode.  Simulation content spans several modalities and covers a wide range of topics.  As a result, it is difficult to create an xAPI Profile that completely covers the data tracking requirements for every use case.  Instead, this Profile describes the basic xAPI requirements for all simulation content and provides best practices for extending this Profile for more specific simulation data tracking requirements. "
+    },
+    "seeAlso": "https://w3id.org/xapi/navy",
+    "versions": [
+        {
+            "id": "https://w3id.org/xapi/simulation/v/3",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/simulation/v/2"
+            ],
+            "generatedAtTime": "2024-08-24T13:20:54.088Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/simulation/v/2",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/simulation/v/1"
+            ],
+            "generatedAtTime": "2024-08-24T12:43:08.225Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/simulation/v/1",
+            "generatedAtTime": "2021-05-26T17:30:09.501Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "US Navy",
+        "url": "https://w3id.org/xapi/navy"
+    },
+    "concepts": [
+        {
+            "id": "https://w3id.org/xapi/simulation/extensions/element-nomenclature",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/simulation/v/3",
+            "prefLabel": {
+                "en": "element-nomenclature"
+            },
+            "definition": {
+                "en": "A string value that provides the system or equipment type designation represented in the content. Use uppercase format of value from the Type Designation column in the program engineering equipment list. (Ex: AS-4108/SPY)\n"
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/simulation/extensions/element-ref-des",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/simulation/v/3",
+            "prefLabel": {
+                "en": "element-ref-des"
+            },
+            "definition": {
+                "en": "A string value of the system or equipment reference designator represented in the content. Use uppercase format of value from the Ref Des column in the program engineering equipment list. Confirm with PMO.\n(Ex: T01A1)\n"
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/simulation/extensions/s1000d-dmc",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/simulation/v/3",
+            "prefLabel": {
+                "en": "s1000d-dmc"
+            },
+            "definition": {
+                "en": "A string value that provides the S1000D  data module code of the procedural data module that is being used to support the content. Use uppercase format of value from the DMC column in the program technical documentation data module requirements list (DMRL). (Ex: MK16-A-CSA-00-0027-00A-283A-A)\n"
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/simulation/extensions/s1000d-sns",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/simulation/v/3",
+            "prefLabel": {
+                "en": "s1000d-sns"
+            },
+            "definition": {
+                "en": "A string value that provides the S1000D  Standard Numbering System code for the system or equipment that is being used to support the content. Use uppercase format of value contained in s1000d-dmc value. Confirm with PMO . May also verify against NAVSEA S1000D DMRL Planner > MICC-SNS tab > Combined column.\n(Ex. CSA-00)\n"
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/simulation/extensions/simulation-mode",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/simulation/v/3",
+            "prefLabel": {
+                "en": "simulation-mode"
+            },
+            "definition": {
+                "en": "A string value used to determine the simulation mode in which the content  is experienced. Acceptable values are: \"freeplay\" , \"graded\", \"guided\" , or \"tutorial\"\n"
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        }
+    ]
+}

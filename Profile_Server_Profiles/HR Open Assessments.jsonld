@@ -1,0 +1,334 @@
+{
+    "id": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "HR Open Assessments"
+    },
+    "definition": {
+        "en": "The HR Open Standards - Assessments profile"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "wasRevisionOf": [
+                "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/1"
+            ],
+            "generatedAtTime": "2025-02-04T19:48:19.232Z"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/1",
+            "generatedAtTime": "2020-11-05T18:40:02.955Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "HR Open Assessments",
+        "url": "https://www.google.com/url?q=https%3A%2F%2Fus02web.zoom.us%2Fj%2F194167366%3Fpwd%3DZzZCbHdSRkM3K3R4VDY4RGM3ZkFkZz09&sa=D&ust=1612970838672000&usg=AOvVaw0j13ZDSSR2Jf00QHwFO2TW"
+    },
+    "concepts": [
+        {
+            "id": "https://w3id.org/xapi/HROSAsessment/v1.0/verbs/solved",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "solved"
+            },
+            "definition": {
+                "en": "The actor has solved a challenge in an assessment."
+            },
+            "deprecated": true
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/verbs/solved",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "solved"
+            },
+            "definition": {
+                "en": "The actor has solved a challenge in an assessment."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/verbs/recorded",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "recorded"
+            },
+            "definition": {
+                "en": "The actor has recorded an answer to an assessment question.   "
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/verbs/simulated",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "simulated"
+            },
+            "definition": {
+                "en": "The actor has simulated actions in response to an assessment question."
+            },
+            "deprecated": true
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/verbs/designed",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "designed"
+            },
+            "definition": {
+                "en": "The actor designed a solution to an assessment item presented in an assessment"
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/verbs/selected",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "selected"
+            },
+            "definition": {
+                "en": "The actor has selected a response in an assessment."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/verbs/chooses",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "choose"
+            },
+            "definition": {
+                "en": "The actor chooses a response to a situation in an assessment."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/verbs/writes",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "wrote"
+            },
+            "definition": {
+                "en": "The actor writes or has written a response to an open ended question or situation in an assessment."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/activitytypes/audio",
+            "type": "ActivityType",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "audio"
+            },
+            "definition": {
+                "en": "An audio recording or manual interaction for the purpose of recording learner or candidate responses to assessment questions."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/activitytypes/codeassessment",
+            "type": "ActivityType",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "code assessment"
+            },
+            "definition": {
+                "en": "An assessment used to evaluate a candidate or learners knowledge of a specific software programming language."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/activitytypes/policeassessment",
+            "type": "ActivityType",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "police assessment"
+            },
+            "definition": {
+                "en": "An assessment, often video or simulation based to test the reactions and responses in certain situations for Police Officers."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/activitytypes/personalityassessment",
+            "type": "ActivityType",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "personality assessment"
+            },
+            "definition": {
+                "en": "An assessment used for identifying characteristics and certain traits when evaluating candidates or assessing learners."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/activitytypes/psychometricassessment",
+            "type": "ActivityType",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "psychometric assessment"
+            },
+            "definition": {
+                "en": "assessments used to determine a candidate or learners aptitude, fit for certain teams or roles, as well as cognitive abilities."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/activitytypes/leadershipassessment",
+            "type": "ActivityType",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "leadership assessment"
+            },
+            "definition": {
+                "en": "An assessment to determine a candidate or learners abilities for leading others or managing other employees."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/activitytypes/worksampleassessment",
+            "type": "ActivityType",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "work sample assessment"
+            },
+            "definition": {
+                "en": "An assessment used to place a candidate or learner into the day in a role to determine how that test taker would perform on the job."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/activitytypes/vrassessment",
+            "type": "ActivityType",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "virtual reality assessment"
+            },
+            "definition": {
+                "en": "a VR experience used to measure a candidate or learners responses to \"on the job\" situations, emotional intelligence, or experiences to help prepare users for work experience."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/activitytypes/fieldassessment",
+            "type": "ActivityType",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "field assessment"
+            },
+            "definition": {
+                "en": "an assessment conducted in the field or in a lab to evaluate work performance and knowledge for candidates or learners"
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/verbs/emulated",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "emulated"
+            },
+            "definition": {
+                "en": "he actor has emulated actions in response to an assessment question"
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/hros-asessment/verbs/performed",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "performed"
+            },
+            "definition": {
+                "en": "The actor has performed a procedure or a set of actions in responses to an assessment question"
+            }
+        }
+    ],
+    "templates": [
+        {
+            "id": "https://www.hropenstandards.org/hropen/templates/answered",
+            "type": "StatementTemplate",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "Answered"
+            },
+            "definition": {
+                "en": "A template used by Assessment Vendors when designing assessment items or requesting configuration information from a learner or candidate who has been assigned the assessment.  Indicates the actor replied to a question, where the object is generally an activity representing the question. The text of the answer will often be included in the response inside the result."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/answered",
+            "rules": [
+                {
+                    "location": "$.result.response",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/scorm/v/2",
+            "type": "StatementTemplate",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "Completed"
+            },
+            "definition": {
+                "en": "Indicates the candidate or learner has completed an assessment item or the full assessment"
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/completed",
+            "rules": [
+                {
+                    "location": "$.result.completed",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "http://adlnet.gov/expapi/verbs/responded",
+            "type": "StatementTemplate",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "Responded"
+            },
+            "definition": {
+                "en": "Indicates an actor reacted or replied to an object."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/responded",
+            "rules": [
+                {
+                    "location": "$.result.response",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/templates/solved",
+            "type": "StatementTemplate",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "solved"
+            },
+            "definition": {
+                "en": "template for the solved event"
+            },
+            "verb": "https://w3id.org/xapi/hros-asessment/verbs/solved",
+            "rules": [
+                {
+                    "location": "$.verb",
+                    "presence": "included",
+                    "any": [
+                        "https://w3id.org/xapi/hros-asessment/verbs/solved"
+                    ]
+                }
+            ]
+        }
+    ],
+    "patterns": [
+        {
+            "id": "https://www.hropenstandards.org/hropen/patterns/answered",
+            "type": "Pattern",
+            "inScheme": "http://profiles.usalearning.net/xapi/043b24b4-4389-435f-b052-805fd5563166/v/2",
+            "prefLabel": {
+                "en": "Answered"
+            },
+            "definition": {
+                "en": "A set of questions being answered in an assessment. This can be a set of 0."
+            }
+        }
+    ]
+}

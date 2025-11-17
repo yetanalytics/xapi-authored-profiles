@@ -1,0 +1,659 @@
+{
+    "id": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "SurveyPOC"
+    },
+    "definition": {
+        "en": "A survey POC using xAPI"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "generatedAtTime": "2024-12-19T04:37:28.477Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "xAPIpoc",
+        "url": "https://"
+    },
+    "templates": [
+        {
+            "id": "https://w3id.org/xapi/tla#completed",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "completed"
+            },
+            "definition": {
+                "en": "Indicates the actor finished or concluded the activity normally"
+            },
+            "verb": "https://adlnet.gov/expapi/verbs/completed",
+            "rules": [
+                {
+                    "location": "$.object.objectType",
+                    "presence": "included",
+                    "all": [
+                        "Activity"
+                    ]
+                },
+                {
+                    "location": "$.result.completion",
+                    "presence": "included",
+                    "all": [
+                        true
+                    ]
+                },
+                {
+                    "location": "$.result.success",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.duration",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.object.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "presence": "included",
+                    "any": [
+                        "https://w3id.org/xapi/tla/activity-types/activity",
+                        "https://w3id.org/xapi/tla/activity-types/assessment"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/tla#passed",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "passed"
+            },
+            "definition": {
+                "en": "Indicates the actor completed an activity to standard"
+            },
+            "verb": "https://adlnet.gov/expapi/verbs/passed",
+            "rules": [
+                {
+                    "location": "$.object.objectType",
+                    "presence": "included",
+                    "all": [
+                        "Activity"
+                    ]
+                },
+                {
+                    "location": "$.result.score.scaled",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.success",
+                    "presence": "included",
+                    "all": [
+                        true
+                    ]
+                },
+                {
+                    "location": "$.result.completion",
+                    "presence": "included",
+                    "all": [
+                        true
+                    ]
+                },
+                {
+                    "location": "$.object.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "presence": "included",
+                    "any": [
+                        "https://w3id.org/xapi/tla/activity-types/assessment"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/cmi5#passed",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Passed"
+            },
+            "definition": {
+                "en": "The learner attempted and succeeded in a judged activity in the AU."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/completed",
+            "rules": [
+                {
+                    "location": "$.result.duration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.success",
+                    "presence": "included",
+                    "any": [
+                        true
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/cmi5#failed",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Failed"
+            },
+            "definition": {
+                "en": "The learner attempted and failed in a judged activity in the AU."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/failed",
+            "rules": [
+                {
+                    "location": "$.result.success",
+                    "presence": "included",
+                    "any": [
+                        false
+                    ]
+                },
+                {
+                    "location": "$.result.duration",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#viewed-page",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "viewing a page"
+            },
+            "definition": {
+                "en": "Statement template used for viewing a page."
+            },
+            "verb": "http://id.tincanapi.com/verb/viewed",
+            "objectActivityType": "https://w3id.org/xapi/acrossx/activities/page",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/templates#viewed-step",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "viewing a step"
+            },
+            "definition": {
+                "en": "Statement template used to indicate the a step has been viewed. A step is part of  a procedure and contains directions or tasks that are done in the same way every time. "
+            },
+            "verb": "http://id.tincanapi.com/verb/viewed",
+            "objectActivityType": "http://id.tincanapi.com/activitytype/step"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/templates#viewed-procedure",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "viewing a procedure"
+            },
+            "definition": {
+                "en": "Statement template used for viewing a procedure. Step-by-step procedures used as performance support can help people review how to perform a task. A procedure is a sequence of steps that are followed systematically to achieve a task or make a decision. "
+            },
+            "verb": "http://id.tincanapi.com/verb/viewed",
+            "objectActivityType": "https://w3id.org/xapi/performance-support/activity-types/procedure"
+        },
+        {
+            "id": "https://w3id.org/xapi/cmi5#completed",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Completed"
+            },
+            "definition": {
+                "en": "The verb \"Completed\" indicates the learner viewed or did all of the relevant activities in an activity. The use of the Completed verb indicates progress of 100%.  Completed cannot have a score."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/completed",
+            "rules": [
+                {
+                    "location": "$.result.score",
+                    "presence": "excluded"
+                },
+                {
+                    "location": "$.result.completion",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.success",
+                    "presence": "excluded"
+                },
+                {
+                    "location": "$.result.duration",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/video/templates#initialized",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Initialized"
+            },
+            "definition": {
+                "en": "The statement template and rules associated with a video being initialized or started."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/initialized",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/length']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/completion-threshold']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/volume']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/video-playback-size']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/user-agent']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/cc-enabled']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/cc-subtitle-lang']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/screen-size']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/speed']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/full-screen']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/session-id']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/video/templates#played",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Played"
+            },
+            "definition": {
+                "en": "The statement template and rules associated with a video being played."
+            },
+            "verb": "https://w3id.org/xapi/video/verbs/played",
+            "objectActivityType": "https://w3id.org/xapi/video/activity-type/video",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/time']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/played-segments']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/session-id']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/video/templates#paused",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Paused"
+            },
+            "definition": {
+                "en": "The statement template and rules associated with a video being paused."
+            },
+            "verb": "https://w3id.org/xapi/video/verbs/paused",
+            "objectActivityType": "https://w3id.org/xapi/video/activity-type/video",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/length']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/time']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/completion-threshold']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/played-segments']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/progress']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/session-id']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/video/templates#completed",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Completed"
+            },
+            "definition": {
+                "en": "The statement template and rules associated with a video being completed."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/completed",
+            "objectActivityType": "https://w3id.org/xapi/video/activity-type/video",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/length']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/time']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/progress']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/completion-threshold']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/played-segments']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/session-id']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/video/templates#closed-captioning",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Enable Closed Captioning"
+            },
+            "definition": {
+                "en": "Volume Change Interaction"
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/interacted",
+            "objectActivityType": "https://w3id.org/xapi/video/activity-type/video",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/time']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/cc-enabled']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/cc-subtitle-lang']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/session-id']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/video/templates#volumechange",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Volume Change Interaction"
+            },
+            "definition": {
+                "en": "Volume Change Interaction"
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/interacted",
+            "objectActivityType": "https://w3id.org/xapi/video/activity-type/video",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/time']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/volume']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/session-id']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/video/templates#screenchange",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Screen Change Interaction"
+            },
+            "definition": {
+                "en": "Screen Change Interaction"
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/interacted",
+            "objectActivityType": "https://w3id.org/xapi/video/activity-type/video",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/time']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/full-screen']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/screen-size']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/video-playback-size']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/session-id']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/audio/templates#seeked",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Seeked"
+            },
+            "definition": {
+                "en": "The statement template and rules associated with the audio content seekbar being moved from and to a specific position."
+            },
+            "verb": "https://w3id.org/xapi/video/verbs/seeked",
+            "objectActivityType": "https://w3id.org/xapi/audio/activity-type/audio",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/time-to']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/time-from']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/session-id']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/audio/templates#played",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.adlnet.gov/xapi/9109408b-fb88-46c8-b1cd-4bc1e2f37dab/v/1",
+            "prefLabel": {
+                "en": "Played"
+            },
+            "definition": {
+                "en": "The statement template and rules associated with audio content being played."
+            },
+            "verb": "https://w3id.org/xapi/video/verbs/played",
+            "objectActivityType": "https://w3id.org/xapi/audio/activity-type/audio",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/time']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/video/extensions/played-segments']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/session-id']",
+                    "presence": "recommended"
+                }
+            ]
+        }
+    ]
+}

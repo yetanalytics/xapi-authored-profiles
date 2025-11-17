@@ -1,0 +1,57 @@
+{
+    "id": "https://w3id.org/xapi/virtual-patient",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Virtual Patient Profile"
+    },
+    "definition": {
+        "en": "The Virtual Patient Profile describes health professions education verbs, activities and learner performance with the goal of understanding the needs of health profession educators."
+    },
+    "seeAlso": "http://groups.medbiq.org/medbiq/display/XIG/Learning+Experience+Group+Home",
+    "versions": [
+        {
+            "id": "https://w3id.org/xapi/virtual-patient/v1.0",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/virtual-patient/"
+            ],
+            "generatedAtTime": "2020-11-05T18:40:02.945Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "Virtual Patient",
+        "url": "https://github.com/adlnet/xapi-authored-profiles"
+    },
+    "concepts": [
+        {
+            "id": "https://w3id.org/xapi/medbiq/verbs/ignored",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/virtual-patient/v1.0",
+            "prefLabel": {
+                "en": "ignored"
+            },
+            "definition": {
+                "en": "Indicates the actor did not acknowledge an object or activity. User has ignored a flag or other simulation data. This is a flag or action sent by either an instructor or the simulation software to indicate that an action was expected by this point in time and had not occurred. Sometimes this is a good thing, and while absent, is not necessarily a negative aspect - for example, if there is a distractor in place that the actor is supposed to ignore as irrelevant."
+            },
+            "relatedMatch": [
+                "http://activitystrea.ms//ignore"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/medbiq/verbs/updated",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/virtual-patient/v1.0",
+            "prefLabel": {
+                "en": "updated"
+            },
+            "definition": {
+                "en": "Indicates the actor prompted a change in a data value or information associated with the object.The Virtual Patient player engine has changed a counter value. This may be triggered by arrival at a particular node, or by a rule within the case design created by the virtual patient author, or by a timer expiration point. Although the counter value may be regarded as a score, note that the ADL verb ‘scored’ is overall score for the case or exam (http://adlnet.gov/expapi/verbs/scored), which is not the same thing."
+            },
+            "broadMatch": [
+                "http://activitystrea.ms/update"
+            ]
+        }
+    ]
+}

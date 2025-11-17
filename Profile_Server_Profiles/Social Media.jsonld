@@ -1,0 +1,93 @@
+{
+    "id": "https://xapi.org.au/sociallearningprofile",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Social Media"
+    },
+    "definition": {
+        "en": "A profile containing terms for describing the publication of and interactions with content delivered through collaborative tools and social media platforms. It is intended in part to provide an alternative to parts of the  deprecated Activity Streams V1.0 vocabulary used previously."
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://xapi.org.au/sociallearningprofile/v/2",
+            "wasRevisionOf": [
+                "https://xapi.org.au/sociallearningprofile/v/1"
+            ],
+            "generatedAtTime": "2021-09-15T06:11:53.489Z"
+        },
+        {
+            "id": "https://xapi.org.au/sociallearningprofile/v/1",
+            "generatedAtTime": "2021-05-21T13:38:29.158Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "xAPI User Group",
+        "url": "https://xapi.org.au/"
+    },
+    "concepts": [
+        {
+            "id": "https://xapi.org.au/sociallearningprofile/joined",
+            "type": "Verb",
+            "inScheme": "https://xapi.org.au/sociallearningprofile/v/2",
+            "prefLabel": {
+                "en": "joined"
+            },
+            "definition": {
+                "en": "The actor became a member of the object which will typically have type group. Examples include joining a discussion forum thread or becoming a member of an organisation."
+            }
+        },
+        {
+            "id": "https://xapi.org.au/sociallearningprofile/left",
+            "type": "Verb",
+            "inScheme": "https://xapi.org.au/sociallearningprofile/v/2",
+            "prefLabel": {
+                "en": "left"
+            },
+            "definition": {
+                "en": "Indicates that the actor has left the object. Examples include leaving a discussion thread or terminating membership of an association. This verb may also be used to describe the actor departing a location."
+            }
+        },
+        {
+            "id": "https://xapi.org.au/sociallearningprofile/article",
+            "type": "Activity",
+            "inScheme": "https://xapi.org.au/sociallearningprofile/v/2",
+            "activityDefinition": {
+                "@context": "https://w3id.org/xapi/profiles/activity-context",
+                "name": {
+                    "en": "article"
+                },
+                "description": {
+                    "en": "Represents objects such as news articles, knowledge base entries, or other similar construct. Such objects generally consist of paragraphs of text, in some cases incorporating embedded media such as photos and inline hyperlinks to other resources."
+                },
+                "type": "https://xapi.org.au/sociallearningprofile/article"
+            }
+        },
+        {
+            "id": "https://xapi.org.au/sociallearningprofile/loved",
+            "type": "Verb",
+            "inScheme": "https://xapi.org.au/sociallearningprofile/v/2",
+            "prefLabel": {
+                "en": "loved"
+            },
+            "definition": {
+                "en": "The actor expressed very strong support for the Activity. This verb may be used for example, to indicate that the Actor used a \"heart\" emoji to endorse an item in a digital environment."
+            }
+        },
+        {
+            "id": "https://xapi.org.au/sociallearningprofile/emotion",
+            "type": "ActivityExtension",
+            "inScheme": "https://xapi.org.au/sociallearningprofile/v/2",
+            "prefLabel": {
+                "en": "emotion"
+            },
+            "definition": {
+                "en": "This extension may be used together with the expressed verb when an actor indicates that they are experiencing an emotion, perhaps by application of an emoji in an online context. Note that in general, the preferred way to denote emojis that represent verbs is not to use this extension but rather to use the associated verbs. For example, a heart emoji should result in a statement involving the verb \"loved\", and a thumbs up or down is denoted by \"liked\" or \"disliked\""
+            },
+            "inlineSchema": "{\"type\": \"string\", \"enum\": [\"afraid\", \"amused\", \"angry\", \"confused\",  \"ecstatic\", \"happy\", \"sad\", \"surprised\"]}"
+        }
+    ]
+}

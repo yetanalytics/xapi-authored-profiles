@@ -1,0 +1,212 @@
+{
+    "id": "https://pttportal.af.mil/xapi/profile/academic-assessment",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Academic Assessment"
+    },
+    "definition": {
+        "en": "Applies to statements the object of which is part of an academic assessment."
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://pttportal.af.mil/xapi/profile/academic-assessment/v/1",
+            "generatedAtTime": "2023-07-11T08:04:30.652Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "19th Air Force",
+        "url": "https://www.aetc.af.mil/Units/19th-Air-Force/"
+    },
+    "templates": [
+        {
+            "id": "https://pttportal.af.mil/xapi/statement-template/attempted-academic-assessment",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/academic-assessment/v/1",
+            "prefLabel": {
+                "en": "attempted (academic assessment)"
+            },
+            "definition": {
+                "en": "For statements where the verb is \"attempted\" and the object is an academic assessment activity."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/attempted",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/assessment",
+            "rules": [
+                {
+                    "location": "$.result.completion",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "When an actor ends an academic assessment, a statement SHOULD be generated using the attempted verb. The result property of the attempted statement SHOULD include the completion and duration properties. \n"
+                    }
+                },
+                {
+                    "location": "$.result.duration",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "When an actor ends an academic assessment, a statement SHOULD be generated using the attempted verb. The result property of the attempted statement SHOULD include the completion and duration properties. \n"
+                    }
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "any": [
+                        "http://adlnet.gov/expapi/activities/assessment"
+                    ]
+                },
+                {
+                    "location": "$.result.score",
+                    "presence": "excluded",
+                    "scopeNote": {
+                        "en": "Because the score for an assessment is not always known at the time the assessment is completed, the completion of the assessment and the score of the assessment should be communicated using two separate statements."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/statement-template/scored-academic-assessment",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/academic-assessment/v/1",
+            "prefLabel": {
+                "en": "scored (academic assessment)"
+            },
+            "definition": {
+                "en": "For statements where the verb is scored and the object is an academic assessment activity."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/scored",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/assessment",
+            "rules": [
+                {
+                    "location": "$.result.score",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "When the grade, score, or pass/fail status for an academic assessment has been determined, an additional statement SHOULD be generated using the scored verb. The scored statement SHOULD include the result.score property and result.success properties whenever they are relevant to the activity."
+                    }
+                },
+                {
+                    "location": "$.object.definition.type",
+                    "any": [
+                        "http://adlnet.gov/expapi/activities/assessment"
+                    ]
+                },
+                {
+                    "location": "$.result.score.scaled",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.raw",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.min",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.max",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/statement-template/answered-academic-assessment-question",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/academic-assessment/v/1",
+            "prefLabel": {
+                "en": "answered (academic assessment question)"
+            },
+            "definition": {
+                "en": "For statements where the verb is \"answered\" and the object is a question in an academic assessment"
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/answered",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/question",
+            "rules": [
+                {
+                    "location": "$.object.definition.type",
+                    "scopeNote": {
+                        "en": "When an actor answers a question on an academic assessment, a statement SHOULD be generated using the answered verb. The result property of the answered statement should include the completion, duration, and response properties.\n"
+                    },
+                    "any": [
+                        "http://adlnet.gov/expapi/activities/question"
+                    ]
+                },
+                {
+                    "location": "$.result.completion",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "When an actor answers a question on an academic assessment, a statement SHOULD be generated using the answered verb. The result property of the answered statement should include the completion, duration, and response properties.\n"
+                    }
+                },
+                {
+                    "location": "$.result.duration",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "When an actor answers a question on an academic assessment, a statement SHOULD be generated using the answered verb. The result property of the answered statement should include the completion, duration, and response properties.\n"
+                    }
+                },
+                {
+                    "location": "$.result.response",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "When an actor answers a question on an academic assessment, a statement SHOULD be generated using the answered verb. The result property of the answered statement should include the completion, duration, and response properties."
+                    }
+                },
+                {
+                    "location": "$.result.score",
+                    "presence": "excluded",
+                    "scopeNote": {
+                        "en": "Because the score for the question is not always known at the time of the answer, the answer to the question and the score for the question should be communicated using two separate statements."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "https://pttportal.af.mil/xapi/statement-template/scored-academic-assessment-question",
+            "type": "StatementTemplate",
+            "inScheme": "https://pttportal.af.mil/xapi/profile/academic-assessment/v/1",
+            "prefLabel": {
+                "en": "scored (academic assessment question)"
+            },
+            "definition": {
+                "en": "For statements where the verb is scored and the object is a question in an academic assessment."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/scored",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/question",
+            "rules": [
+                {
+                    "location": "$.object.definition.type",
+                    "any": [
+                        "http://adlnet.gov/expapi/activities/question"
+                    ]
+                },
+                {
+                    "location": "$.result.score",
+                    "presence": "included",
+                    "scopeNote": {
+                        "en": "When the grade, score, or pass/fail status for the question has been determined, an additional statement SHOULD be generated using the scored verb. "
+                    }
+                },
+                {
+                    "location": "$.result.score.scaled",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.raw",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.min",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.max",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.success",
+                    "presence": "recommended"
+                }
+            ]
+        }
+    ]
+}

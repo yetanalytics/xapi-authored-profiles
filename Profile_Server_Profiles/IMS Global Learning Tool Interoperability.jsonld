@@ -1,0 +1,274 @@
+{
+    "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "IMS Global Learning Tool Interoperability"
+    },
+    "definition": {
+        "en": "This is an xAPI Profile that expresses and LTI Launch and Return as xAPI data, for the purpose of expressing LTI Launches as part of a larger IMS Global Caliper xAPI Profile."
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "wasRevisionOf": [
+                "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/8"
+            ],
+            "generatedAtTime": "2021-06-11T14:07:34.437Z"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/8",
+            "wasRevisionOf": [
+                "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/7"
+            ],
+            "generatedAtTime": "2021-06-11T14:03:39.013Z"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/7",
+            "wasRevisionOf": [
+                "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/6"
+            ],
+            "generatedAtTime": "2021-06-11T14:00:11.264Z"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/6",
+            "wasRevisionOf": [
+                "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/5"
+            ],
+            "generatedAtTime": "2021-06-11T13:38:13.550Z"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/5",
+            "wasRevisionOf": [
+                "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/4"
+            ],
+            "generatedAtTime": "2021-06-11T13:30:12.033Z"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/4",
+            "wasRevisionOf": [
+                "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/3"
+            ],
+            "generatedAtTime": "2021-06-11T13:17:01.557Z"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/3",
+            "wasRevisionOf": [
+                "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/2"
+            ],
+            "generatedAtTime": "2021-06-10T00:31:33.474Z"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/2",
+            "wasRevisionOf": [
+                "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/1"
+            ],
+            "generatedAtTime": "2021-06-09T23:43:44.635Z"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/1",
+            "generatedAtTime": "2021-05-26T17:30:09.501Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "MakingBetter",
+        "url": "https://github.com/makingbetter"
+    },
+    "concepts": [
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/extension/federated-session-id",
+            "type": "ContextExtension",
+            "inScheme": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "prefLabel": {
+                "en": "federated-session-id"
+            },
+            "definition": {
+                "en": "This is the identifier for a federated session. It represents the shared session across learning tools launched from an existing (and launched) learning activity. This is in relation to LTI."
+            },
+            "inlineSchema": "{}"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/document/membership",
+            "type": "AgentProfileResource",
+            "inScheme": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "prefLabel": {
+                "en": "membership"
+            },
+            "definition": {
+                "en": "This is the context a learner belongs to. Referenced by LTI."
+            },
+            "contentType": "text/plain",
+            "context": "",
+            "inlineSchema": "{}"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/verb/lti-used",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "prefLabel": {
+                "en": "Used (LTI)"
+            },
+            "definition": {
+                "en": "\"Used\" is a reserved term for LTI Launch, hence the identifier is \"lti-used\""
+            },
+            "broadMatch": [
+                "https://w3id.org/xapi/seriousgames/verbs/used"
+            ],
+            "relatedMatch": [
+                "http://adlnet.gov/expapi/verbs/launched"
+            ]
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/verb/returned-lti",
+            "type": "Verb",
+            "inScheme": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "prefLabel": {
+                "en": "returned (lti)"
+            },
+            "definition": {
+                "en": "a verb to identify a return from an LTI federated session to the main learning activity."
+            }
+        }
+    ],
+    "templates": [
+        {
+            "id": "https://w3id.org/xapi/tla#launched2",
+            "type": "StatementTemplate",
+            "inScheme": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "prefLabel": {
+                "en": "launched"
+            },
+            "definition": {
+                "en": "Indicates the actor attempted to start up an activity"
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/launched",
+            "rules": [
+                {
+                    "location": "$.object.objectType",
+                    "presence": "included",
+                    "all": [
+                        "Activity"
+                    ]
+                },
+                {
+                    "location": "$.object.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.objectActivityType",
+                    "presence": "recommended",
+                    "any": [
+                        "https://w3id.org/xapi/tla/activity-types/activity",
+                        "https://w3id.org/xapi/tla/activity-types/assessment"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/templates/used",
+            "type": "StatementTemplate",
+            "inScheme": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "prefLabel": {
+                "en": "Used"
+            },
+            "definition": {
+                "en": "In LTI, a learning tool launched from the main learning activity is \"used\" creating a federated LTI session"
+            },
+            "deprecated": true,
+            "verb": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/verb/lti-used",
+            "rules": [
+                {
+                    "location": "$.context.extensions.federated-session-id",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/templates/returned",
+            "type": "StatementTemplate",
+            "inScheme": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "prefLabel": {
+                "en": "returned"
+            },
+            "definition": {
+                "en": "in LTI, when the learner leaves the learning appliance, they \"returned\" to the main session."
+            },
+            "deprecated": true,
+            "verb": "https://w3id.org/xapi/dod-isd/verbs/returned",
+            "rules": [
+                {
+                    "location": "$.context.extensions.federated-session-id",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/templates/returned-lti",
+            "type": "StatementTemplate",
+            "inScheme": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "prefLabel": {
+                "en": "Returned (LTI)"
+            },
+            "definition": {
+                "en": "a returned statement informs LTI-adopting systems that the focus has \"returned\" to the main activity."
+            },
+            "verb": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/verb/returned-lti"
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/templates/used-lti",
+            "type": "StatementTemplate",
+            "inScheme": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "prefLabel": {
+                "en": "Used (LTI)"
+            },
+            "definition": {
+                "en": "indicates a learning tool has been launched starting a federated session."
+            },
+            "verb": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/verb/lti-used",
+            "rules": [
+                {
+                    "location": "$.context.extensions.federated-session-id",
+                    "presence": "included"
+                }
+            ]
+        }
+    ],
+    "patterns": [
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/patterns/use-and-return",
+            "type": "Pattern",
+            "primary": false,
+            "inScheme": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "prefLabel": {
+                "en": "use-and-return"
+            },
+            "definition": {
+                "en": "Describes a basic pattern for LTI use."
+            },
+            "deprecated": true,
+            "sequence": [
+                "https://w3id.org/xapi/tla#launched2",
+                "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/templates/returned"
+            ]
+        },
+        {
+            "id": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/patterns/used-returned",
+            "type": "Pattern",
+            "primary": true,
+            "inScheme": "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/v/9",
+            "prefLabel": {
+                "en": "Used-Returned"
+            },
+            "definition": {
+                "en": "general pattern for lti launches"
+            },
+            "sequence": [
+                "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/templates/used-lti",
+                "http://profiles.usalearning.net/xapi/5eda3789-9801-4dcc-ae22-9971b2a31871/templates/returned-lti"
+            ]
+        }
+    ]
+}

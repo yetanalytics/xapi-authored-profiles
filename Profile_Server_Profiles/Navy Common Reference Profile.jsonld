@@ -1,0 +1,337 @@
+{
+    "id": "https://w3id.org/xapi/netc",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Navy Common Reference Profile"
+    },
+    "definition": {
+        "en": "The Navy Common Reference Profile provides general types of tracking activities can be reused across multiple types of content with other Navy xAPI Profiles. Other, more specific, Navy xAPI Profiles can also reference and reuse the common xAPI Activities described in this document."
+    },
+    "seeAlso": "https://w3id.org/xapi/navy",
+    "versions": [
+        {
+            "id": "https://w3id.org/xapi/netc/v/3",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/netc/v/2"
+            ],
+            "generatedAtTime": "2024-08-24T13:06:53.441Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/v/2",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/netc/v/1"
+            ],
+            "generatedAtTime": "2024-08-24T12:42:05.899Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/v/1",
+            "generatedAtTime": "2020-11-05T18:40:02.955Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "US Navy",
+        "url": "https://w3id.org/xapi/navy"
+    },
+    "concepts": [
+        {
+            "id": "https://w3id.org/xapi/netc/verbs/accessed",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "accessed"
+            },
+            "definition": {
+                "en": "Indicates the actor accessed or navigated to an object."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/verbs/closed",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "closed"
+            },
+            "definition": {
+                "en": "Indicates the actor ended or shut down an object that was previously opened."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/verbs/opened",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "opened"
+            },
+            "definition": {
+                "en": "Indicates the actor opened an object."
+            },
+            "related": [
+                "https://w3id.org/xapi/netc/verbs/closed"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/verbs/printed",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "printed"
+            },
+            "definition": {
+                "en": "Indicates the actor printed an electronic file or other digital content from their screen to a printing device."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/verbs/uploaded",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "uploaded"
+            },
+            "definition": {
+                "en": "Indicates the actor transferred a file from a local computer to a remote computer, application, or web server."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/activity-types/menu",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "menu"
+            },
+            "definition": {
+                "en": "A list of options in a software interface presented to a user to act on. A menu can be an entire user interface or only part of one. The menu Activity is the parent of the menu-item Activity."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/activity-types/menu-item",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "menu-item"
+            },
+            "definition": {
+                "en": "A single option in a software interface’s menu list of options. The menu-item is a child of the menu Activity."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/course-id-number",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "course-id-number"
+            },
+            "definition": {
+                "en": "A string value that identifies which course the content supports. The school’s or learning center’s official course identification number in uppercase format. The id should NOT include revision or version information. (Example. A-150-9021)."
+            },
+            "inlineSchema": " { \"type\": \"string\" }",
+            "context": ""
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/launch-location",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "launch-location"
+            },
+            "definition": {
+                "en": "A string value describing whether the content was launched while ashore or afloat."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/learning-objective",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "learning-objective"
+            },
+            "definition": {
+                "en": "A string value that provides the learning objective statement that the content supports."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/navy-enlisted-classification",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "navy-enlisted-classification"
+            },
+            "definition": {
+                "en": "A string value used to identify the Navy Enlisted Code that the content supports. Refer to Navy Personnel Command for current NEC values2. Use uppercase format. (Example: V03A)"
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/school-center",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "school-center"
+            },
+            "definition": {
+                "en": "A string value describing the schoolhouse or learning center that owns the content."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/hull-applicability",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "hull-applicability"
+            },
+            "definition": {
+                "en": "A string value that identifies the hull number(s) to which the content is applicable. An official Navy ship, submarine, or airframe identifier.  Shall be provided in UPPERCASE, without spaces, hyphens, or any other special characters. (Examples: DDG81, F22)"
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/hull-configuration",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "hull-configuration"
+            },
+            "definition": {
+                "en": "A string value that identifies the hardware/software configuration that is represented in the content. An official Navy ship configuration nomenclature.3 (Example: 9.C2.3.0.2D)."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/tech-doc-id",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "tech-doc-id"
+            },
+            "definition": {
+                "en": "A string value that identifies the technical document or PMS series and version/revision used to support the content. Use uppercase format of value in the Tech Doc ID column in the program’s bibliography of technical documentation. Do NOT include revision or version information. (Example: ST890-A8-AEG-020)"
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/tech-doc-procedure-id",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "tech-doc-procedure-id"
+            },
+            "definition": {
+                "en": "A string value that identifies the technical document or MRC and version/revision used to support the content. Use uppercase format of value in the Procedure ID column in the program’s bibliography of technical documentation. (Example: WP009)."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/tech-doc-procedure-title",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "tech-doc-procedure-title"
+            },
+            "definition": {
+                "en": "A string value that provides the approved title of the documented procedure used to support the content. Use uppercase format of value in the Procedure Title column in the program’s bibliography of technical documentation.\n(Example: Data Channel Fault Localization)."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/user-agent",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "user-agent"
+            },
+            "definition": {
+                "en": "A string value used to determine the user’s browser and operating system. Refer to NETC xAPI Implementation Guidelines."
+            },
+            "inlineSchema": "{ \"type\": \"string\" }"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/activity-types/organization",
+            "type": "ActivityType",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "organization"
+            },
+            "definition": {
+                "en": "An organizational construct to structure content outside the organizational concepts specified in a profile.  In most cases, organization activities are contextActivities (e.g., a parent), not the objects of statements."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/coa-id",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "coa-id"
+            },
+            "definition": {
+                "en": "An array of string values containing IRI identifiers  associated with course(s) of action (COA). "
+            },
+            "schema": "https://w3id.org/xapi/netc/extensions/coa-id"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/resource-url",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "resource-url"
+            },
+            "definition": {
+                "en": "A string value of the URL of a resource. Typically used in conjunction with opening a link, downloading a file, etc."
+            },
+            "schema": "https://w3id.org/xapi/netc/extensions/resource-url",
+            "context": ""
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/target-audience",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "target-audience"
+            },
+            "definition": {
+                "en": "An array of string values representing the skill level of the  target audience for the content. "
+            },
+            "schema": "https://w3id.org/xapi/netc/extensions/target-audience"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/target-rating",
+            "type": "ActivityExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "target-rating"
+            },
+            "definition": {
+                "en": "An array of string values representing the  specific Navy rating(s) targeted by this content. "
+            },
+            "schema": "https://w3id.org/xapi/netc/extensions/target-rating"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/feedback-target",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "feedback-target"
+            },
+            "definition": {
+                "en": "An activity object that is the target of the feedback.Used to identify the object that is the intended target of the  feedback. "
+            },
+            "schema": "https://w3id.org/xapi/netc/extensions/feedback-target"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/extensions/referrer-location",
+            "type": "ContextExtension",
+            "inScheme": "https://w3id.org/xapi/netc/v/3",
+            "prefLabel": {
+                "en": "referrer-location"
+            },
+            "definition": {
+                "en": "An activity object that was the referrer to the current activity. Used to help identify reachback activity or the location of the object the user came from. "
+            },
+            "schema": "https://w3id.org/xapi/netc/extensions/referrer-location"
+        }
+    ]
+}

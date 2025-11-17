@@ -1,0 +1,233 @@
+{
+    "id": "https://w3id.org/xapi/adb",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Actionable Data Book (ADB) Profile"
+    },
+    "definition": {
+        "en": "The xAPI ABD profile is used to identify interactions between an actor and an eBook activity based on the IEEE ADB project."
+    },
+    "seeAlso": "https://docs.google.com/spreadsheets/d/1uXuOeN0FEy3Qv3D5FWUW1-74Lbv_uGMCyqjoDtrLNnw/edit#gid=0",
+    "versions": [
+        {
+            "id": "https://w3id.org/xapi/adb/v/2",
+            "wasRevisionOf": [
+                "https://w3id.org/xapi/adb/v1.0"
+            ],
+            "generatedAtTime": "2021-06-09T12:27:52.038Z"
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/v1.0",
+            "generatedAtTime": "2020-11-05T18:40:02.955Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "Actionable Data Books",
+        "url": "https://github.com/adlnet/xapi-authored-profiles"
+    },
+    "concepts": [
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/annotated",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "annotated"
+            },
+            "definition": {
+                "en": "Provide notes or symbols for further explanation or thoughts while reading."
+            },
+            "relatedMatch": [
+                "https://w3id.org/xapi/acrossx/verbs/annotated",
+                "http://risc-inc.com/annotator/verbs/annotated"
+            ],
+            "narrower": [
+                "https://w3id.org/xapi/adb/verbs/highlighted"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/arrived",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "arrived"
+            },
+            "definition": {
+                "en": "Indicates the actor arrived a specific location by movement or progress. To arrive a specific scene within a story or book experience."
+            },
+            "broadMatch": [
+                "http://adlnet.gov/expapi/verbs/progressed"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/attended",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "attended"
+            },
+            "definition": {
+                "en": "Indicates the actor was present at a virtual or physical event or activity. "
+            },
+            "relatedMatch": [
+                "http://adlnet.gov/expapi/verbs/attended"
+            ],
+            "exactMatch": [
+                "http://adlnet.gov/expapi/verbs/attended"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/bookmarked",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "bookmarked"
+            },
+            "definition": {
+                "en": "Persisting the current location (page) where the reader stopped the ebook activity."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/coached",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "coached"
+            },
+            "definition": {
+                "en": "To teach or lead another person through an activity. Coached is a direct response to the Requested verb. The receiver of a Requested statement will periodically respond by sending a Coached statement that clears out the coach's queue."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/demanded",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "demanded"
+            },
+            "definition": {
+                "en": "Indicates a request for eBook session or redirect. Shall be distinct from requested which refers to actor conversations (e.g., requested help fom instructor)."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/described",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "described"
+            },
+            "definition": {
+                "en": "Detailed answer as a result of an interaction in an ebook activity or assessment."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/highlighted",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "highlighted"
+            },
+            "definition": {
+                "en": "Highlight important areas in an eBook for the purpose of later review or note taking."
+            },
+            "broader": [
+                "https://w3id.org/xapi/adb/verbs/annotated"
+            ],
+            "narrower": [
+                "https://w3id.org/xapi/adb/verbs/noted"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/initiated",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "initiated"
+            },
+            "definition": {
+                "en": "Used to initiate text code, user preferences or accessibility preferences to a teacher."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/noted",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "noted"
+            },
+            "definition": {
+                "en": "Add annotation or notes to selected text within an ebook or highlight."
+            },
+            "broader": [
+                "https://w3id.org/xapi/adb/verbs/annotated"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/read",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "read"
+            },
+            "definition": {
+                "en": "Indicates that the actor read the object. This is typically only applicable for objects representing printed or written content, such as a book, a message or a comment."
+            },
+            "exactMatch": [
+                "http://activitystrea.ms/schema/read"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/referenced",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "referenced"
+            },
+            "definition": {
+                "en": "Use dictionary or other resource to look up a selected word. A learner might reference outside information in support of the topic and could reference additional reading for his/her colleagues or mentor."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/requested",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "requested"
+            },
+            "definition": {
+                "en": "Indicates the actor needed or demanded an object or another actor. Requested indicates a comment that is shared with peers as a group or Coach as a trainer. The request for coaching or help prompts users to respond giving them coaching credit."
+            },
+            "exactMatch": [
+                "http://activitystrea.ms/schema/request"
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/selected",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "selected"
+            },
+            "definition": {
+                "en": "Choose section of text to copy to clipboard."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/watched",
+            "type": "Verb",
+            "inScheme": "https://w3id.org/xapi/adb/v/2",
+            "prefLabel": {
+                "en": "watched"
+            },
+            "definition": {
+                "en": "Indicates that the actor has watched the object. This verb is typically applicable only when the object represents dynamic, visible content such as a movie, a television show or a public performance."
+            },
+            "exactMatch": [
+                "https://w3id.org/xapi/acrossx/verbs/watched",
+                "http://activitystrea.ms/schema/watch"
+            ]
+        }
+    ]
+}

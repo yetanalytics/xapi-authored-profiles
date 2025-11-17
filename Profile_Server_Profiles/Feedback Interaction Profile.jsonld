@@ -1,0 +1,141 @@
+{
+    "id": "https://xapi.com.au/profiles/feedback-interaction/v1.0",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Feedback Interaction Profile"
+    },
+    "definition": {
+        "en": "Captures feedback interactions including written comments and star ratings across learning experiences"
+    },
+    "seeAlso": "https://xapi.com.au",
+    "versions": [
+        {
+            "id": "https://xapi.com.au/profiles/feedback-interaction/v1.0/v/2",
+            "wasRevisionOf": [
+                "https://xapi.com.au/profiles/feedback-interaction/v1.0/v/1"
+            ],
+            "generatedAtTime": "2025-06-18T05:51:12.083Z"
+        },
+        {
+            "id": "https://xapi.com.au/profiles/feedback-interaction/v1.0/v/1",
+            "generatedAtTime": "2025-05-29T18:59:39.130Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "xapi.com.au",
+        "url": "https://xapicomau.slack.com"
+    },
+    "concepts": [
+        {
+            "id": "https://xapi.com.au/activities/feedback",
+            "type": "ActivityType",
+            "inScheme": "https://xapi.com.au/profiles/feedback-interaction/v1.0/v/2",
+            "prefLabel": {
+                "en": "Feedback Interaction"
+            },
+            "definition": {
+                "en": "A generic feedback activity. It represents any instance where a user provides feedback (written, rating, or both) on an object or experience."
+            }
+        },
+        {
+            "id": "https://xapi.com.au/extensions/comment-text",
+            "type": "ResultExtension",
+            "inScheme": "https://xapi.com.au/profiles/feedback-interaction/v1.0/v/2",
+            "prefLabel": {
+                "en": "Comment Text"
+            },
+            "definition": {
+                "en": "Free-form text comment provided by the user."
+            },
+            "schema": "https://xapi.com.au/profiles/feedback-interaction/v1.0"
+        },
+        {
+            "id": "https://w3id.org/xapi/acrossx/verbs/rated",
+            "type": "Verb",
+            "inScheme": "https://xapi.com.au/profiles/feedback-interaction/v1.0/v/2",
+            "prefLabel": {
+                "en": "rated"
+            },
+            "definition": {
+                "en": "rated"
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/adb/verbs/commented",
+            "type": "Verb",
+            "inScheme": "https://xapi.com.au/profiles/feedback-interaction/v1.0/v/2",
+            "prefLabel": {
+                "en": "commented"
+            },
+            "definition": {
+                "en": "commented"
+            }
+        },
+        {
+            "id": "https://xapi.com.au/extensions/star-rating",
+            "type": "ResultExtension",
+            "inScheme": "https://xapi.com.au/profiles/feedback-interaction/v1.0/v/2",
+            "prefLabel": {
+                "en": "Star Rating"
+            },
+            "definition": {
+                "en": "Captures the numerical star rating given by the user as feedback. Usually 1 to 5 stars."
+            },
+            "schema": "https://xapi.com.au/profiles/feedback-interaction/v1.0"
+        }
+    ],
+    "templates": [
+        {
+            "id": "https://xapi.com.au/profiles/feedback-interaction/v1.0/templates/commented",
+            "type": "StatementTemplate",
+            "inScheme": "https://xapi.com.au/profiles/feedback-interaction/v1.0/v/2",
+            "prefLabel": {
+                "en": "Commented on an Activity"
+            },
+            "definition": {
+                "en": "Captures when a learner leaves a written comment as feedback."
+            },
+            "verb": "https://w3id.org/xapi/adb/verbs/commented",
+            "rules": [
+                {
+                    "location": "result.extensions['https://xapi.com.au/extensions/comment-text']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://xapi.com.au/profiles/feedback-interaction/v1.0/templates/rated",
+            "type": "StatementTemplate",
+            "inScheme": "https://xapi.com.au/profiles/feedback-interaction/v1.0/v/2",
+            "prefLabel": {
+                "en": "Rated an Activity"
+            },
+            "definition": {
+                "en": "Captures when a learner gives a star rating as feedback."
+            },
+            "rules": [
+                {
+                    "location": "$.result.extensions['https://xapi.com.au/extensions/star-rating']",
+                    "presence": "included"
+                }
+            ]
+        }
+    ],
+    "patterns": [
+        {
+            "id": "https://xapi.com.au/profiles/feedback-interaction/v1.0/patterns/full-feedback",
+            "type": "Pattern",
+            "primary": true,
+            "inScheme": "https://xapi.com.au/profiles/feedback-interaction/v1.0/v/2",
+            "prefLabel": {
+                "en": "Full Feedback Pattern"
+            },
+            "definition": {
+                "en": "A learner provides written feedback before rating an activity."
+            }
+        }
+    ]
+}

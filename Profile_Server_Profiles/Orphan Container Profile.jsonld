@@ -1,0 +1,1749 @@
+{
+    "id": "https://profiles.usalearning.net/profiles/OrphanProfile",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Orphan Container Profile"
+    },
+    "definition": {
+        "en": "Holds deleted profile components that still have references."
+    },
+    "versions": [
+        {
+            "id": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "generatedAtTime": "2021-12-13T21:29:33.901Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "acrossx",
+        "url": "https://github.com/adlnet/xapi-authored-profiles"
+    },
+    "concepts": [
+        {
+            "id": "https://xapi.org.au/geolocationprofile/verb/checkout",
+            "type": "Verb",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "check out"
+            },
+            "definition": {
+                "en": "Indicates that the actor has checked-out of an object . For instance, a person checked out of  a place"
+            }
+        },
+        {
+            "id": "https://profiles.adlnet.gov/xapi/917114b6-71b4-4fcd-b6d3-892890594446/activitytype/Preflight",
+            "type": "ActivityType",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Simulation Session",
+                "es": "Sesión de Simulación"
+            },
+            "definition": {
+                "en": "Flight Simulation Session",
+                "es": "Sesión de simulación de vuelo"
+            },
+            "broadMatch": [
+                "http://adlnet.gov/expapi/activities/simulation"
+            ]
+        },
+        {
+            "id": "https://xapi.org.au/geolocationprofile/verb/checkin",
+            "type": "Verb",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "checked in"
+            },
+            "definition": {
+                "en": "Indicates that the actor has checked-in to the object. For instance, a person checking-in to a place"
+            }
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/virtual-classroom/verb/muted",
+            "type": "Verb",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "muted"
+            },
+            "definition": {
+                "en": "A user is muted within a virtual classroom, a conference or a webinar."
+            }
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/virtual-classroom/verb/unmuted",
+            "type": "Verb",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "unmuted"
+            },
+            "definition": {
+                "en": "A user is unmuted within a virtual classroom, conference, webinar"
+            }
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/virtual-classroom/verb/started-camera",
+            "type": "Verb",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "started camera"
+            },
+            "definition": {
+                "en": "A camera has been started."
+            }
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/virtual-classroom/verb/stopped-camera",
+            "type": "Verb",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "stopped camera"
+            },
+            "definition": {
+                "en": "A camera has been stopped."
+            }
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/virtual-classroom/verb/shared-screen",
+            "type": "Verb",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "shared screen"
+            },
+            "definition": {
+                "en": "A user has shared the screen."
+            }
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/virtual-classroom/verb/unshared-screen",
+            "type": "Verb",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "unshared screen"
+            },
+            "definition": {
+                "en": "A user has stopped sharing the screen."
+            }
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/virtual-classroom/verb/raised-hand",
+            "type": "Verb",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "raised hand"
+            },
+            "definition": {
+                "en": "A user has raised the hand in the virtual classroom."
+            }
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/virtual-classroom/verb/lowered-hand",
+            "type": "Verb",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "lowered hand"
+            },
+            "definition": {
+                "en": "A user has lowered the hand in the virtual classroom."
+            }
+        },
+        {
+            "id": "https://w3id.org/xapi/virtual-classroom/activityt-types/virtual-classroom",
+            "type": "ActivityType",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "virtual classroom"
+            },
+            "definition": {
+                "en": "Consists of a live classroom session conducted online."
+            }
+        }
+    ],
+    "templates": [
+        {
+            "id": "https://w3id.org/xapi/video/templates#initialized",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Initialized"
+            },
+            "definition": {
+                "en": "The statement template and rules associated with a video being initialized or started."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/initialized",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/length']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/completion-threshold']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/volume']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/video-playback-size']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/user-agent']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/cc-enabled']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/cc-subtitle-lang']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/screen-size']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/speed']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/full-screen']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/video/extensions/session-id']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/templates#initialized-application",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "initializing an application"
+            },
+            "definition": {
+                "en": "Statement template for initializing a performance support app."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/initialized",
+            "objectActivityType": "https://w3id.org/xapi/performance-support/activity-types/application"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/templates#terminated-application",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "terminating an application"
+            },
+            "definition": {
+                "en": "Statement template for terminating a performance support app."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/terminated",
+            "objectActivityType": "https://w3id.org/xapi/performance-support/activity-types/application"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/templates#selected-checklist-item",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "selecting a checklist item"
+            },
+            "definition": {
+                "en": "A performance support application can send xAPI Statements to indicate when checklist items within a checklist Activity have been selected or deselected. A checklist is often used to help people follow a policy or process correctly."
+            },
+            "verb": "http://id.tincanapi.com/verb/selected",
+            "objectActivityType": "http://id.tincanapi.com/activitytype/checklist-item"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/templates#deselected-checklist-item",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "deselecting a checklist item"
+            },
+            "definition": {
+                "en": "Statement template used each time a checklist item is deselected."
+            },
+            "verb": "https://w3id.org/xapi/tla/verbs/deselected",
+            "objectActivityType": "http://id.tincanapi.com/activitytype/checklist-item"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/templates#completed-checklist",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "completing a checklist"
+            },
+            "definition": {
+                "en": "A performance support application can send xAPI Statements to indicate when the checklist has been completed. The completion criteria for a checklist is determined by the design and purpose of the checklist, which could require that all checklist items be selected before the checklist is considered to be completed. "
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/completed",
+            "objectActivityType": "http://id.tincanapi.com/activitytype/checklist"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/templates#viewed-step",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "viewing a step"
+            },
+            "definition": {
+                "en": "Statement template used to indicate the a step has been viewed. A step is part of  a procedure and contains directions or tasks that are done in the same way every time. "
+            },
+            "verb": "http://id.tincanapi.com/verb/viewed",
+            "objectActivityType": "http://id.tincanapi.com/activitytype/step"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/templates#viewed-procedure",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "viewing a procedure"
+            },
+            "definition": {
+                "en": "Statement template used for viewing a procedure. Step-by-step procedures used as performance support can help people review how to perform a task. A procedure is a sequence of steps that are followed systematically to achieve a task or make a decision. "
+            },
+            "verb": "http://id.tincanapi.com/verb/viewed",
+            "objectActivityType": "https://w3id.org/xapi/performance-support/activity-types/procedure"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/templates#searched-terms",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "searching for terms"
+            },
+            "definition": {
+                "en": "Statement template used for searching terms within a performance support app. This capability provides the user with the ability to quickly find information they are looking for either within the performance support app or in externally searched resources. "
+            },
+            "verb": "https://w3id.org/xapi/performance-support/verbs/searched",
+            "objectActivityType": "https://w3id.org/xapi/acrossx/activities/search-engine"
+        },
+        {
+            "id": "https://w3id.org/xapi/performance-support/templates#selected-search-result",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "selecting a search result"
+            },
+            "definition": {
+                "en": "Statement template used for selecting or clicking the search result. After a user searches for a term in a performance support application, the search engine typically returns several results to be displayed to the user. Each of the results are linked to either an internal or external resource related to the search term. "
+            },
+            "verb": "http://id.tincanapi.com/verb/selected",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/link"
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#opened-file",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "opening a file"
+            },
+            "definition": {
+                "en": "Statement template used for opening a file."
+            },
+            "verb": "https://w3id.org/xapi/netc/verbs/opened",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/file",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included",
+                    "any": [
+                        "https://w3id.org/xapi/netc/v1.0"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#uploaded-file",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "uploading a file"
+            },
+            "definition": {
+                "en": "Statement template used for uploading a file."
+            },
+            "verb": "https://w3id.org/xapi/netc/verbs/uploaded",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/file",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included",
+                    "any": [
+                        "https://w3id.org/xapi/netc/v1.0"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#downloaded-file",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "downloading a file"
+            },
+            "definition": {
+                "en": "Statement template used for downloading a file."
+            },
+            "verb": "http://id.tincanapi.com/verb/downloaded",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/file",
+            "rules": [
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included",
+                    "any": [
+                        "https://w3id.org/xapi/netc/v1.0"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#closed-file",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "closing a file"
+            },
+            "definition": {
+                "en": "Statement template used for closing a file."
+            },
+            "verb": "https://w3id.org/xapi/netc/verbs/closed",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/file",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included",
+                    "any": [
+                        "https://w3id.org/xapi/netc/v1.0"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#viewed-page",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "viewing a page"
+            },
+            "definition": {
+                "en": "Statement template used for viewing a page."
+            },
+            "verb": "http://id.tincanapi.com/verb/viewed",
+            "objectActivityType": "https://w3id.org/xapi/acrossx/activities/page",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#printed-page",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "printing a page"
+            },
+            "definition": {
+                "en": "Statement template used for printing a page."
+            },
+            "verb": "https://w3id.org/xapi/netc/verbs/printed",
+            "objectActivityType": "https://w3id.org/xapi/acrossx/activities/page",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#exited-page",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "exiting a page"
+            },
+            "definition": {
+                "en": "Statement template used for intentionally exiting or leaving a page. "
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/exited",
+            "objectActivityType": "https://w3id.org/xapi/acrossx/activities/page",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#accessed-menu",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "accessing a menu"
+            },
+            "definition": {
+                "en": "Statement template used for accessing a menu. "
+            },
+            "verb": "https://w3id.org/xapi/netc/verbs/accessed",
+            "objectActivityType": "https://w3id.org/xapi/netc/activity-types/menu",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#accessed-menu-item",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "accessing a menu item"
+            },
+            "definition": {
+                "en": "Statement template used for accessing a menu item"
+            },
+            "verb": "https://w3id.org/xapi/netc/verbs/accessed",
+            "objectActivityType": "https://w3id.org/xapi/netc/activity-types/menu-item",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#opened-link",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "opening a link"
+            },
+            "definition": {
+                "en": "Statement template used when opening a link."
+            },
+            "verb": "https://w3id.org/xapi/netc/verbs/opened",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/link",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#liked-resource",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "liking a resource"
+            },
+            "definition": {
+                "en": "Statement template used for liking a resource"
+            },
+            "verb": "https://w3id.org/xapi/acrossx/verbs/liked",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc/templates#disliked-resource",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "disliking a resource"
+            },
+            "definition": {
+                "en": "Statement template for disliking a resource."
+            },
+            "verb": "https://w3id.org/xapi/acrossx/verbs/disliked",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc-assessment/templates#initialized-assessment",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Initializing an Assessment "
+            },
+            "definition": {
+                "en": "Communicated when an attempt on a stand-alone assessment is started. If the assessment is part of another activity that already is tracking the attempt, initialized and terminated statements can be omitted."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/initialized",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/assessment",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location]",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent]",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc-assessment/templates#suspended-assessment",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Suspending an Assessment"
+            },
+            "definition": {
+                "en": "Statement template for suspending an assessment with the intent of coming back to it at a later time. Only required if the assessment design provides a way to be suspended and resumed at a later time."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/suspended",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/assessment",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location]",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent]",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc-assessment/templates#resumed-assessment",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Resuming an Assessment"
+            },
+            "definition": {
+                "en": "Statement template for resuming an attempt on an a suspended assessment. Only required if the assessment provides a way to be suspended and resumed at a later time."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/resumed",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/assessment",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location]",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent]",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc-assessment/templates#terminated-assessment",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Terminating an Assessment"
+            },
+            "definition": {
+                "en": "Recommended to be communicated when an attempt on an assessment has ended. The overall assessment results – success, completion, score, duration – SHALL also be conveyed in the Terminated Statement, if known. "
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/terminated",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/assessment",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location]",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent]",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc-assessment/templates#true-false",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Responding to a True-False Question"
+            },
+            "definition": {
+                "en": "Statement template for responding to an interaction with two possible responses: true or false."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/responded",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/cmi.interaction",
+            "contextParentActivityType": [
+                "http://adlnet.gov/expapi/activities/assessment"
+            ],
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location]",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent]",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.platform",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.object.definition.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.description",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.interactionType",
+                    "any": [
+                        "true-false"
+                    ]
+                },
+                {
+                    "location": "$.object.definition.extensions",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.parent",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.success",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.completion",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.scaled",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.raw",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.min",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.max",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.response",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/netc-assessment/extensions/result/response-explanation']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/netc-assessment/templates#responded-to-question",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Responding to an Assessment Question"
+            },
+            "definition": {
+                "en": "Statement template for responding to a question interaction, such as: true-false, choice, fill-in, long-fill-in, matching, performance, sequencing, likert, numeric or other"
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/responded",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/cmi.interaction",
+            "contextParentActivityType": [
+                "http://adlnet.gov/expapi/activities/assessment"
+            ],
+            "rules": [
+                {
+                    "location": "$.context.contextActivities.parent",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.response",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.interactionType",
+                    "presence": "included",
+                    "any": [
+                        "true-false",
+                        "choice",
+                        "fill-in",
+                        "long-fill-in",
+                        "matching",
+                        "performance",
+                        "sequencing",
+                        "likert",
+                        "numeric",
+                        "other"
+                    ]
+                },
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.platform",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.object.definition.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.description",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.object.definition.extensions",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.parent",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.success",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.completion",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.scaled",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.raw",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.min",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.max",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.response",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.extensions['https://w3id.org/xapi/netc-assessment/extensions/result/response-explanation']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location]",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location]",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/simulation/templates#initialized-simulation",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "initializing a simulation"
+            },
+            "definition": {
+                "en": "An Initialized Statement is required to be communicated when a simulation is started. A new context.registration UUID SHALL be included in the Initialized Statement (and associated Terminated Statement for the simulation)."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/initialized",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/simulation",
+            "rules": [
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/simulation/extensions/simulation-mode ']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.platform",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/simulation/templates#terminated-simulation",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "terminating a simulation"
+            },
+            "definition": {
+                "en": "A Terminated Statement is recommended to be communicated when an attempt on a simulation is ended. The context.registration ID used for a simulation initialization and termination SHALL be the same unique ID during an attempt.  There is no requirement that other granular activities use this same UUID within an attempt on the simulation but it is recommended if possible.  The overall simulation results can be conveyed in the Terminated Statement. The instructional design of the simulation will help determine what the content developer should set, if anything, for the overall simulation results in result.success, result.completion, and result.score.scaled."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/terminated",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/simulation",
+            "rules": [
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/simulation/extensions/simulation-mode ']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.platform",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/templates#initialized",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Initializing a TT Simulation"
+            },
+            "definition": {
+                "en": "Statement required to be communicated when a TT Simulation is started"
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/initialized",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/simulation",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/hull-applicability']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/hull-configuration']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/course-id-number']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation#terminated",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Terminating a TT Simulation"
+            },
+            "definition": {
+                "en": "Statement recommended to be communicated when an attempt on a TT Simulation is ended. "
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/terminated",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/simulation",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/user-agent']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/hull-applicability']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/hull-configuration']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/course-id-number']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.duration",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.success",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.completion",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.scaled",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/templates#initialized-scenario",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Initializing a Task Trainer Scenario"
+            },
+            "definition": {
+                "en": "Statement communicated when an attempt on a TT Simulation scenario is started."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/initialized",
+            "objectActivityType": "https://w3id.org/xapi/task-trainer-simulation/activity-types/task-trainer-scenario",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.registration",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location'']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/learning-objective']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/navy-enlisted-classification']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/simulation/extensions/simulation-mode']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/templates#suspended-scenario",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Suspending a Task Trainer Scenario "
+            },
+            "definition": {
+                "en": "Statement for suspending a task trainer scenario."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/suspended",
+            "objectActivityType": "https://w3id.org/xapi/task-trainer-simulation/activity-types/task-trainer-scenario",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.grouping",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location'']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/simulation/extensions/simulation-mode']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/learning-objective']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/navy-enlisted-classification']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/templates#resumed-scenario",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Resuming a Task Trainer Scenario"
+            },
+            "definition": {
+                "en": "Statement for resuming a task trainer scenario"
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/resumed",
+            "objectActivityType": "https://w3id.org/xapi/task-trainer-simulation/activity-types/task-trainer-scenario",
+            "rules": [
+                {
+                    "location": "$.actor.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.name",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.actor.account.homePage",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.category[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.contextActivities.grouping[*].id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/school-center']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/launch-location]",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/simulation/extensions/simulation-mode']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/learning-objective']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['https://w3id.org/xapi/netc/extensions/navy-enlisted-classification']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/task-trainer-simulation/templates#completed-scenario",
+            "type": "StatementTemplate",
+            "inScheme": "https://profiles.usalearning.net/profiles/OrphanProfile/v/1",
+            "prefLabel": {
+                "en": "Completing a Task Trainer Scenario"
+            },
+            "definition": {
+                "en": "Used when task trainer scenario activities are completed by the learners or when the objective of the scenario has been met."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/completed",
+            "objectActivityType": "https://w3id.org/xapi/task-trainer-simulation/activity-types/task-trainer-scenario"
+        }
+    ]
+}

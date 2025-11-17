@@ -1,0 +1,276 @@
+{
+    "id": "https://xapi.org.au/geolocationprofile",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "GeoLocation",
+        "bn": "Bengali"
+    },
+    "definition": {
+        "en": "This profile is for applications that use positioning to capture location-based events. Examples of positioning include the use of concepts such as proximity, altitude, latitude and longitude.\n",
+        "bn": "Use of Bengali"
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "https://xapi.org.au/geolocationprofile/v/1",
+            "generatedAtTime": "2021-05-26T17:30:09.501Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "xAPI User Group",
+        "url": "https://xapi.org.au/"
+    },
+    "concepts": [
+        {
+            "id": "https://xapi.org.au/geolocationprofileprofile/verb/finished",
+            "type": "Verb",
+            "inScheme": "https://xapi.org.au/geolocationprofile/v/1",
+            "prefLabel": {
+                "en": "finished",
+                "fr": "Fini"
+            },
+            "definition": {
+                "en": "Indicates the actor finished interacting with an object",
+                "fr": "Indique que l' actor a fini d'interagir avec l'objet"
+            }
+        },
+        {
+            "id": "https://xapi.org.au/geolocationprofileprofile/activity/place",
+            "type": "ActivityType",
+            "inScheme": "https://xapi.org.au/geolocationprofile/v/1",
+            "prefLabel": {
+                "en": "Place",
+                "fr": "Lieu"
+            },
+            "definition": {
+                "en": "Represents a physical location. Locations can be represented using geographic coordinates, a physical address, a free-form location name, or any combination of these ",
+                "fr": "Represente une location physique. Les lieux peuvent etre representes au travers de coordonnees geographiques, d’une adresse physique, d’un lieu de location libre ou alors peuvent etre une combinaison de ceux-ci. "
+            }
+        },
+        {
+            "id": "https://xapi.org.au/geolocationprofileprofile/verb/checkedin/",
+            "type": "Verb",
+            "inScheme": "https://xapi.org.au/geolocationprofile/v/1",
+            "prefLabel": {
+                "en": "Checked In",
+                "fr": "Enregistré"
+            },
+            "definition": {
+                "en": "Indicates that the actor has checked-in to the object. For instance, a person checking-in to a place.",
+                "fr": "Indique que l'actor  s'est enregistré avec l'objet. Par exemple, une personne qui s'enregistre a un endroit."
+            }
+        },
+        {
+            "id": "https://xapi.org.au/geolocationprofileprofile/verb/checkedout/",
+            "type": "Verb",
+            "inScheme": "https://xapi.org.au/geolocationprofile/v/1",
+            "prefLabel": {
+                "en": "Checked Out",
+                "fr": "Quitté"
+            },
+            "definition": {
+                "en": "Indicates that the actor has checked-out of an object . For instance, a person checked out of  a place.",
+                "fr": "Indique que l'actor a quitté l'objet. Par exemple, une personne qui a quitté un endroit. "
+            }
+        }
+    ],
+    "templates": [
+        {
+            "id": "http://adlnet.gov/expapi/verbs/initialized",
+            "type": "StatementTemplate",
+            "inScheme": "https://xapi.org.au/geolocationprofile/v/1",
+            "prefLabel": {
+                "en": "Initialize"
+            },
+            "definition": {
+                "en": "The actor starts or initializes the location process."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/initialized",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/geojson']",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "https://xapi.org.au/geolocationprofileprofile/verb/checkin",
+            "type": "StatementTemplate",
+            "inScheme": "https://xapi.org.au/geolocationprofile/v/1",
+            "prefLabel": {
+                "en": "checkin"
+            },
+            "definition": {
+                "en": "Indicates that the actor has checked-in to the object. For instance, a person checking-in to a place. "
+            },
+            "verb": "https://xapi.org.au/geolocationprofile/verb/checkin",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/latitude']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/longitude']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/geojson']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/browser-info']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://xapi.org.au/geolocationprofileprofile/verb/checkout",
+            "type": "StatementTemplate",
+            "inScheme": "https://xapi.org.au/geolocationprofile/v/1",
+            "prefLabel": {
+                "en": "Check out"
+            },
+            "definition": {
+                "en": "Indicates that the actor has checked-out of an object . For instance, a person checked out of  a place. "
+            },
+            "verb": "https://xapi.org.au/geolocationprofile/verb/checkout",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/latitude']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/longitude']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/geojson']",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/browser-info']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/tla#attended",
+            "type": "StatementTemplate",
+            "inScheme": "https://xapi.org.au/geolocationprofile/v/1",
+            "prefLabel": {
+                "en": "attended"
+            },
+            "definition": {
+                "en": "Indicates that the actor is present at a virtual or physical event or activity"
+            },
+            "verb": "https://w3id.org/xapi/tla/verbs/attended",
+            "rules": [
+                {
+                    "location": "$.result.duration",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.object.definition.extensions['https://w3id.org/xapi/tla/extensions/instance']",
+                    "presence": "recommended",
+                    "scopeNote": {
+                        "en": "This should be a pointer to the an actual session definition"
+                    }
+                },
+                {
+                    "location": "$.object.definition.activityType",
+                    "presence": "included",
+                    "any": [
+                        "https://w3id.org/xapi/tla/activity-types/activity"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "https://w3id.org/xapi/dod-isd/verbs/mapped",
+            "type": "StatementTemplate",
+            "inScheme": "https://xapi.org.au/geolocationprofile/v/1",
+            "prefLabel": {
+                "en": "mapped"
+            },
+            "definition": {
+                "en": "Represent an area on a map "
+            },
+            "verb": "https://w3id.org/xapi/dod-isd/verbs/mapped",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/geojson']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/browser-info']",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "http://adlnet.gov/expapi/verbs/exited",
+            "type": "StatementTemplate",
+            "inScheme": "https://xapi.org.au/geolocationprofile/v/1",
+            "prefLabel": {
+                "en": "exited"
+            },
+            "definition": {
+                "en": "Indicates the actor intentionally departed from the activity or object"
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/exited",
+            "rules": [
+                {
+                    "location": "$.id",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/geojson']",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.context.extensions['http://id.tincanapi.com/extension/browser-info']",
+                    "presence": "recommended"
+                }
+            ]
+        }
+    ]
+}
